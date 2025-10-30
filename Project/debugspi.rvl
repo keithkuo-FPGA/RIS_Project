@@ -1,0 +1,82 @@
+<Project ModBy="Inserter" SigType="0" Name="C:/Keith/FPGA/TMY/RIS/RIS_Project4/Project/debugspi.rvl" Date="2025-10-21">
+    <IP Version="1_6_042617"/>
+    <Design DesignEntry="Schematic/Verilog HDL" Synthesis="synplify" DeviceFamily="MachXO3LF" DesignName="project"/>
+    <Core InsertDataset="0" Insert="1" Reveal_sig="648720475" Name="system_top_LA0" ID="0">
+        <Setting>
+            <Clock SampleClk="pll_u0/CLKOS2" SampleEnable="0" EnableClk="" EnableClk_Pri="0"/>
+            <TraceBuffer Implementation="0" BitTimeStamp="0" hasTimeStamp="0" IncTrigSig="0" BufferDepth="2048"/>
+            <Capture Mode="0" MinSamplesPerTrig="32"/>
+            <Event CntEnable="0" MaxEventCnt="8"/>
+            <TrigOut Polarity="0" MinPulseWidth="0" TrigOutNetType="1" EnableTrigOut="0" TrigOutNet="reveal_debug_system_top_LA0_net"/>
+            <DistRAM Disable="0"/>
+        </Setting>
+        <Dataset Name="Base">
+            <Trace>
+                <Sig Type="SIG" Name="eep_sclk"/>
+                <Sig Type="SIG" Name="eep_cs_n"/>
+                <Sig Type="SIG" Name="eep_dq0"/>
+                <Sig Type="SIG" Name="eep_dq1"/>
+                <Sig Type="SIG" Name="eep_dq2"/>
+                <Sig Type="SIG" Name="eep_dq3"/>
+                <Bus Name="u_eep/u_core/state">
+                    <Sig Type="SIG" Name="u_eep/u_core/state:0"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/state:1"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/state:2"/>
+                </Bus>
+                <Bus Name="u_eep/u_core/erase_type">
+                    <Sig Type="SIG" Name="u_eep/u_core/erase_type:0"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/erase_type:1"/>
+                </Bus>
+                <Bus Name="u_eep/u_core/spi_tx_bits">
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:0"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:1"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:2"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:3"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:4"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:5"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:6"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:7"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:8"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:9"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:10"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:11"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:12"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:13"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:14"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:15"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:16"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:17"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:18"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:19"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:20"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:21"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:22"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:23"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:24"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:25"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:26"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:27"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:28"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:29"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:30"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:31"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:32"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:33"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:34"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:35"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:36"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:37"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:38"/>
+                    <Sig Type="SIG" Name="u_eep/u_core/spi_tx_bits:39"/>
+                </Bus>
+                <Sig Type="SIG" Name="u_eep/u_core/spi_done"/>
+                <Sig Type="SIG" Name="u_eep/u_core/spi_busy"/>
+                <Sig Type="SIG" Name="u_eep/u_core/spi_keep_cs"/>
+            </Trace>
+            <Trigger>
+                <TU Serialbits="0" Type="0" ID="1" Sig="eep_cs_n,"/>
+                <TE MaxSequence="1" MaxEvnCnt="1" ID="1" Resource="1"/>
+            </Trigger>
+        </Dataset>
+    </Core>
+</Project>

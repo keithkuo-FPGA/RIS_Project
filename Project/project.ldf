@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="project" device="LCMXO3LF-6900C-5BG256C" default_implementation="impl1">
+    <Options/>
+    <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
+        <Options def_top="system_top"/>
+        <Source name="../RTL/spi_slave_top.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../SIM/tb_spi_slave.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
+            <Options/>
+        </Source>
+        <Source name="../SIM/spi_master_top.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
+            <Options/>
+        </Source>
+        <Source name="../SIM/spi_bit_engine.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
+            <Options/>
+        </Source>
+        <Source name="../RTL/system_top.v" type="Verilog" type_short="Verilog">
+            <Options top_module="system_top"/>
+        </Source>
+        <Source name="../LatticeIP/pll/pll.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="../RTL/spi_eeprom_iface.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../RTL/dp_bram_256x32.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../RTL/spi_bit_engine_v2.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../RTL/led32x32_buf_writer.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../RTL/led32x32_matrix_driver.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../SIM/spi_eeprom_model_simple.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
+            <Options/>
+        </Source>
+        <Source name="../RTL/spi_eeprom_iface_bridge.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../RTL/async_fifo_dc.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="debugspi.rvl" type="Reveal" type_short="Reveal" excluded="TRUE">
+            <Options/>
+        </Source>
+        <Source name="impl1/impl1.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+        <Source name="project.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="RA1.rva" type="Reveal Analyzer Project File" type_short="RVA">
+            <Options/>
+        </Source>
+        <Source name="sim/sim.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+        <Source name="../RTL/eeprom_spi_multicycle.sdc" type="Synplify Design Constraints File" type_short="SDC">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="project1.sty"/>
+</BaliProject>

@@ -1,0 +1,1284 @@
+# Reading pref.tcl
+# do {C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/Project/sim/sim.mdo}
+# Loading project sim
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 17:45:18 on Oct 30,2025
+# vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/spi_eeprom_model_simple.v 
+# -- Compiling module eeprom_m95p32_emu
+# ** Warning: C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/spi_eeprom_model_simple.v(169): (vlog-2182) 'id_array' might be read before written in always_comb or always @* block.
+# ** Warning: C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/spi_eeprom_model_simple.v(118): (vlog-2182) 'state' might be read before written in always_comb or always @* block.
+# 
+# Top level modules:
+# 	eeprom_m95p32_emu
+# End time: 17:45:18 on Oct 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 17:45:18 on Oct 30,2025
+# vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/spi_bit_engine.v 
+# -- Compiling module spi_bit_engine_sim
+# 
+# Top level modules:
+# 	spi_bit_engine_sim
+# End time: 17:45:18 on Oct 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 17:45:18 on Oct 30,2025
+# vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/spi_master_top.v 
+# -- Compiling module spi_master_top
+# 
+# Top level modules:
+# 	spi_master_top
+# End time: 17:45:19 on Oct 30,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 17:45:19 on Oct 30,2025
+# vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/spi_bit_engine_v2.v 
+# -- Compiling module spi_bit_engine_v2
+# 
+# Top level modules:
+# 	spi_bit_engine_v2
+# End time: 17:45:19 on Oct 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 17:45:19 on Oct 30,2025
+# vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/spi_eeprom_iface.v 
+# -- Compiling module spi_eeprom_iface
+# 
+# Top level modules:
+# 	spi_eeprom_iface
+# End time: 17:45:19 on Oct 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 17:45:19 on Oct 30,2025
+# vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/LatticeIP/fifo" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/LatticeIP/fifo/fifo.v 
+# -- Compiling module fifo
+# 
+# Top level modules:
+# 	fifo
+# End time: 17:45:19 on Oct 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 17:45:19 on Oct 30,2025
+# vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/async_fifo_dc.v 
+# -- Compiling module async_fifo_dc
+# 
+# Top level modules:
+# 	async_fifo_dc
+# End time: 17:45:19 on Oct 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 17:45:19 on Oct 30,2025
+# vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/spi_eeprom_iface_bridge.v 
+# -- Compiling module spi_eeprom_iface_bridge
+# 
+# Top level modules:
+# 	spi_eeprom_iface_bridge
+# End time: 17:45:20 on Oct 30,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 17:45:20 on Oct 30,2025
+# vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/led32x32_matrix_driver.v 
+# -- Compiling module led32x32_matrix_driver
+# 
+# Top level modules:
+# 	led32x32_matrix_driver
+# End time: 17:45:20 on Oct 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 17:45:20 on Oct 30,2025
+# vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/led32x32_buf_writer.v 
+# -- Compiling module led32x32_row_streamer
+# 
+# Top level modules:
+# 	led32x32_row_streamer
+# End time: 17:45:20 on Oct 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 17:45:20 on Oct 30,2025
+# vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/spi_slave_top.v 
+# -- Compiling module spi_slave_engine
+# 
+# Top level modules:
+# 	spi_slave_engine
+# End time: 17:45:20 on Oct 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 17:45:20 on Oct 30,2025
+# vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/dp_bram_256x32.v 
+# -- Compiling module dp_bram_256x32
+# 
+# Top level modules:
+# 	dp_bram_256x32
+# End time: 17:45:20 on Oct 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 17:45:20 on Oct 30,2025
+# vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/LatticeIP/pll2" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/LatticeIP/pll2/pll2.v 
+# -- Compiling module pll2
+# 
+# Top level modules:
+# 	pll2
+# End time: 17:45:20 on Oct 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 17:45:20 on Oct 30,2025
+# vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/LatticeIP/pll" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/LatticeIP/pll/pll.v 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 17:45:20 on Oct 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 17:45:20 on Oct 30,2025
+# vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/system_top.v 
+# -- Compiling module system_top
+# 
+# Top level modules:
+# 	system_top
+# End time: 17:45:21 on Oct 30,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 17:45:21 on Oct 30,2025
+# vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v 
+# -- Compiling module tb_system_top_v2
+# 
+# Top level modules:
+# 	tb_system_top_v2
+# End time: 17:45:21 on Oct 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -L work -L pmi_work -L ovi_machxo3l tb_system_top_v2 
+# Start time: 17:45:21 on Oct 30,2025
+# //  ModelSim - Lattice FPGA Edition 2023.3 Jul 18 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim - Lattice FPGA Edition and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.tb_system_top_v2
+# Loading ovi_machxo3l.GSR
+# Loading ovi_machxo3l.PUR
+# Loading work.system_top
+# Loading work.pll
+# Loading ovi_machxo3l.VLO
+# Loading ovi_machxo3l.EHXPLLJ
+# Loading work.pll2
+# Loading ovi_machxo3l.OSCH
+# Loading work.dp_bram_256x32
+# Loading work.spi_slave_engine
+# Loading work.led32x32_row_streamer
+# Loading work.led32x32_matrix_driver
+# Loading work.spi_eeprom_iface_bridge
+# Loading work.async_fifo_dc
+# Loading work.fifo
+# Loading ovi_machxo3l.VHI
+# Loading ovi_machxo3l.FIFO8KB
+# Loading work.spi_eeprom_iface
+# Loading work.spi_bit_engine_v2
+# Loading work.spi_master_top
+# Loading work.spi_bit_engine_sim
+# Loading work.eeprom_m95p32_emu
+# GetModuleFileName: �䤣����w���ҲաC
+# 
+# 
+# .main_pane.wave.interior.cs.body.pw.wf
+# Warning! Wrong oscillator frequency; default to 2.08 MHz.
+run -all
+# [408600000] 🚨 GPIO_LED[0] toggled (Frame Done)
+# 
+# ========================================
+#   System Top Complete Test (V2)
+# ========================================
+# 
+# 
+# --- Test 1: Basic Sanity Check ---
+# [11946900000]  READ FPGA_VER_H: MISMATCH - Got 0x94, Expected 0x16
+# [18773700000]  READ FPGA_VER_L: MISMATCH - Got 0x22, Expected 0x8d
+# 
+# --- Test 2: First Pattern Write ---
+# [18773700000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
+# [23965900000]    SET Mode=0x00: SPI WRITE Done
+# [23965900000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [29158100000]  SET ADDR_L=0x00: SPI WRITE Done
+# [29158100000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [34350300000]  SET ADDR_H=0x00: SPI WRITE Done
+# [34350300000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
+# [39542500000]  SET EEP_OP=0x01: SPI WRITE Done
+# [39542500000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [240115600000]    WRITE_PATTERN: SPI WRITE Done
+# [296749100000] LED Frame Done detected
+# 
+# --- Test 3: Second Pattern Write (EEPROM_RW) ---
+# [302902800000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [308095000000] T Mode=EEPROM_RW: SPI WRITE Done
+# [308095000000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [313287300000]  SET ADDR_L=0x00: SPI WRITE Done
+# [313287300000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [318479500000]  SET ADDR_H=0x00: SPI WRITE Done
+# [318479500000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [519052500000]    WRITE_PATTERN: SPI WRITE Done
+# 
+# --- Test 4: EEPROM Read Trigger ---
+# [818469900000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [823662100000] T Mode=EEPROM_RW: SPI WRITE Done
+# [823662100000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [828854300000]  SET ADDR_L=0x00: SPI WRITE Done
+# [828854300000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [834046500000]  SET ADDR_H=0x00: SPI WRITE Done
+# [834046500000]  SET EEP_OP=READ: SPI WRITE bank=2 addr=0x02 len=1
+# [839238700000]  SET EEP_OP=READ: SPI WRITE Done
+# [855680700000]  READ EEP Status: MISMATCH - Got 0x0b, Expected 0x00
+# [891353100000]  READ EEP Status: MISMATCH - Got 0x0f, Expected 0x00
+# [927025500000]  READ EEP Status: MISMATCH - Got 0x0f, Expected 0x00
+# [943467500000]  READ EEP Status: MISMATCH - Got 0x0f, Expected 0x00
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [1039619500000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [1044811700000] T Mode=EEPROM_RW: SPI WRITE Done
+# [1044811700000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [1050003900000]       SET ADDR_L: SPI WRITE Done
+# [1050003900000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [1055196100000]       SET ADDR_H: SPI WRITE Done
+# [1055196100000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [1060388300000] gger EEPROM Read: SPI WRITE Done
+#   ✅ Read Complete!
+# [1315864200000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 5: MODE_FAST_SWITCH ---
+# [1315864200000] Mode=FAST_SWITCH: SPI WRITE bank=0 addr=0x05 len=1
+# [1321056400000] Mode=FAST_SWITCH: SPI WRITE Done
+# [1321056400000] stSwitch ID=0x00: SPI WRITE bank=0 addr=0xf0 len=1
+# [1326248600000] stSwitch ID=0x00: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [1470476600000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [1475668800000] T Mode=EEPROM_RW: SPI WRITE Done
+# [1475668800000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [1480861000000]       SET ADDR_L: SPI WRITE Done
+# [1480861000000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [1486053200000]       SET ADDR_H: SPI WRITE Done
+# [1486053200000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [1491245400000] gger EEPROM Read: SPI WRITE Done
+# [1693356900000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# ========================================
+#   TEST SUMMARY (V2 Migration)
+# ========================================
+# Total Errors: 6
+# ========================================
+# ❌ TESTS FAILED - 6 error(s)
+# ========================================
+# 
+# ** Note: $finish    : C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v(700)
+#    Time: 17126873100 ps  Iteration: 0  Instance: /tb_system_top_v2
+# 1
+# Break in Module tb_system_top_v2 at C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v line 700
+# Compile of spi_eeprom_model_simple.v was successful with warnings.
+# Compile of spi_bit_engine.v was successful.
+# Compile of spi_master_top.v was successful.
+# Compile of spi_bit_engine_v2.v was successful.
+# Compile of spi_eeprom_iface.v was successful.
+# Compile of fifo.v was successful.
+# Compile of async_fifo_dc.v was successful.
+# Compile of spi_eeprom_iface_bridge.v was successful.
+# Compile of led32x32_matrix_driver.v was successful.
+# Compile of led32x32_buf_writer.v was successful.
+# Compile of spi_slave_top.v was successful.
+# Compile of dp_bram_256x32.v was successful.
+# Compile of pll2.v was successful.
+# Compile of pll.v was successful.
+# Compile of system_top.v was successful.
+# Compile of tb_spi_slave.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_system_top_v2
+# Loading work.system_top
+# Loading work.pll
+# Loading work.pll2
+# Loading work.dp_bram_256x32
+# Loading work.spi_slave_engine
+# Loading work.led32x32_row_streamer
+# Loading work.led32x32_matrix_driver
+# Loading work.spi_eeprom_iface_bridge
+# Loading work.async_fifo_dc
+# Loading work.fifo
+# Loading work.spi_eeprom_iface
+# Loading work.spi_bit_engine_v2
+# Loading work.spi_master_top
+# Loading work.spi_bit_engine_sim
+# Loading work.eeprom_m95p32_emu
+run -all
+# Warning! Wrong oscillator frequency; default to 2.08 MHz.
+# [408600000] 🚨 GPIO_LED[0] toggled (Frame Done)
+# 
+# ========================================
+#   System Top Complete Test (V2)
+# ========================================
+# 
+# 
+# --- Test 1: Basic Sanity Check ---
+# [11946900000]  READ FPGA_VER_H: PASS (0x94)
+# [18773700000]  READ FPGA_VER_L: PASS (0x22)
+# 
+# --- Test 2: First Pattern Write ---
+# [18773700000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
+# [23965900000]    SET Mode=0x00: SPI WRITE Done
+# [23965900000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [29158100000]  SET ADDR_L=0x00: SPI WRITE Done
+# [29158100000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [34350300000]  SET ADDR_H=0x00: SPI WRITE Done
+# [34350300000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
+# [39542500000]  SET EEP_OP=0x01: SPI WRITE Done
+# [39542500000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [240115600000]    WRITE_PATTERN: SPI WRITE Done
+# [296749100000] LED Frame Done detected
+# 
+# --- Test 3: Second Pattern Write (EEPROM_RW) ---
+# [302902800000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [308095000000] T Mode=EEPROM_RW: SPI WRITE Done
+# [308095000000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [313287300000]  SET ADDR_L=0x00: SPI WRITE Done
+# [313287300000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [318479500000]  SET ADDR_H=0x00: SPI WRITE Done
+# [318479500000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [519052500000]    WRITE_PATTERN: SPI WRITE Done
+# 
+# --- Test 4: EEPROM Read Trigger ---
+# [818469900000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [823662100000] T Mode=EEPROM_RW: SPI WRITE Done
+# [823662100000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [828854300000]  SET ADDR_L=0x00: SPI WRITE Done
+# [828854300000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [834046500000]  SET ADDR_H=0x00: SPI WRITE Done
+# [834046500000]  SET EEP_OP=READ: SPI WRITE bank=2 addr=0x02 len=1
+# [839238700000]  SET EEP_OP=READ: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [935390700000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [940582900000] T Mode=EEPROM_RW: SPI WRITE Done
+# [940582900000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [945775100000]       SET ADDR_L: SPI WRITE Done
+# [945775100000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [950967300000]       SET ADDR_H: SPI WRITE Done
+# [950967300000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [956159500000] gger EEPROM Read: SPI WRITE Done
+#   ✅ Read Complete!
+# [1211635400000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 5: MODE_FAST_SWITCH ---
+# [1211635400000] Mode=FAST_SWITCH: SPI WRITE bank=0 addr=0x05 len=1
+# [1216827600000] Mode=FAST_SWITCH: SPI WRITE Done
+# [1216827600000] stSwitch ID=0x00: SPI WRITE bank=0 addr=0xf0 len=1
+# [1222019800000] stSwitch ID=0x00: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [1366247800000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [1371440000000] T Mode=EEPROM_RW: SPI WRITE Done
+# [1371440000000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [1376632200000]       SET ADDR_L: SPI WRITE Done
+# [1376632200000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [1381824400000]       SET ADDR_H: SPI WRITE Done
+# [1381824400000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [1387016600000] gger EEPROM Read: SPI WRITE Done
+# [1589128100000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 1: Basic Sanity Check ---
+# [1615185300000]  READ FPGA_VER_H: PASS (0x94)
+# [1622012100000]  READ FPGA_VER_L: PASS (0x22)
+# 
+# --- Test 2: First Pattern Write ---
+# [1622012100000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
+# [1627204300000]    SET Mode=0x00: SPI WRITE Done
+# [1627204300000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [1632396500000]  SET ADDR_L=0x00: SPI WRITE Done
+# [1632396500000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [1637588800000]  SET ADDR_H=0x00: SPI WRITE Done
+# [1637588800000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
+# [1642781000000]  SET EEP_OP=0x01: SPI WRITE Done
+# [1642781000000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [1843354000000]    WRITE_PATTERN: SPI WRITE Done
+# [1899987600000] LED Frame Done detected
+# 
+# --- Test 3: Second Pattern Write (EEPROM_RW) ---
+# [1906141300000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [1911333500000] T Mode=EEPROM_RW: SPI WRITE Done
+# [1911333500000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [1916525700000]  SET ADDR_L=0x00: SPI WRITE Done
+# [1916525700000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [1921717900000]  SET ADDR_H=0x00: SPI WRITE Done
+# [1921717900000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [2122291000000]    WRITE_PATTERN: SPI WRITE Done
+# 
+# --- Test 4: EEPROM Read Trigger ---
+# [2421708300000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [2426900500000] T Mode=EEPROM_RW: SPI WRITE Done
+# [2426900500000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [2432092700000]  SET ADDR_L=0x00: SPI WRITE Done
+# [2432092700000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [2437284900000]  SET ADDR_H=0x00: SPI WRITE Done
+# [2437284900000]  SET EEP_OP=READ: SPI WRITE bank=2 addr=0x02 len=1
+# [2442477100000]  SET EEP_OP=READ: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [2538629100000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [2543821400000] T Mode=EEPROM_RW: SPI WRITE Done
+# [2543821400000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [2549013600000]       SET ADDR_L: SPI WRITE Done
+# [2549013600000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [2554205800000]       SET ADDR_H: SPI WRITE Done
+# [2554205800000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [2559398000000] gger EEPROM Read: SPI WRITE Done
+# [2761509500000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 5: MODE_FAST_SWITCH ---
+# [2761509500000] Mode=FAST_SWITCH: SPI WRITE bank=0 addr=0x05 len=1
+# [2766701700000] Mode=FAST_SWITCH: SPI WRITE Done
+# [2766701700000] stSwitch ID=0x00: SPI WRITE bank=0 addr=0xf0 len=1
+# [2771893900000] stSwitch ID=0x00: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [2916121900000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [2921314100000] T Mode=EEPROM_RW: SPI WRITE Done
+# [2921314100000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [2926506300000]       SET ADDR_L: SPI WRITE Done
+# [2926506300000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [2931698500000]       SET ADDR_H: SPI WRITE Done
+# [2931698500000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [2936890700000] gger EEPROM Read: SPI WRITE Done
+# [3139002200000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 1: Basic Sanity Check ---
+# [3165059400000]  READ FPGA_VER_H: PASS (0x94)
+# [3171886200000]  READ FPGA_VER_L: PASS (0x22)
+# 
+# --- Test 2: First Pattern Write ---
+# [3171886200000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
+# [3177078400000]    SET Mode=0x00: SPI WRITE Done
+# [3177078400000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [3182270600000]  SET ADDR_L=0x00: SPI WRITE Done
+# [3182270600000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [3187462800000]  SET ADDR_H=0x00: SPI WRITE Done
+# [3187462800000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
+# [3192655000000]  SET EEP_OP=0x01: SPI WRITE Done
+# [3192655000000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [3393228100000]    WRITE_PATTERN: SPI WRITE Done
+# [3449861600000] LED Frame Done detected
+# 
+# --- Test 3: Second Pattern Write (EEPROM_RW) ---
+# [3456015400000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [3461207600000] T Mode=EEPROM_RW: SPI WRITE Done
+# [3461207600000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [3466399800000]  SET ADDR_L=0x00: SPI WRITE Done
+# [3466399800000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [3471592000000]  SET ADDR_H=0x00: SPI WRITE Done
+# [3471592000000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [3672165100000]    WRITE_PATTERN: SPI WRITE Done
+# 
+# --- Test 4: EEPROM Read Trigger ---
+# [3971582400000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [3976774600000] T Mode=EEPROM_RW: SPI WRITE Done
+# [3976774600000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [3981966800000]  SET ADDR_L=0x00: SPI WRITE Done
+# [3981966800000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [3987159000000]  SET ADDR_H=0x00: SPI WRITE Done
+# [3987159000000]  SET EEP_OP=READ: SPI WRITE bank=2 addr=0x02 len=1
+# [3992351200000]  SET EEP_OP=READ: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [4088503200000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [4093695400000] T Mode=EEPROM_RW: SPI WRITE Done
+# [4093695400000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [4098887600000]       SET ADDR_L: SPI WRITE Done
+# [4098887600000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [4104079900000]       SET ADDR_H: SPI WRITE Done
+# [4104079900000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [4109272100000] gger EEPROM Read: SPI WRITE Done
+# [4311383600000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 5: MODE_FAST_SWITCH ---
+# [4311383600000] Mode=FAST_SWITCH: SPI WRITE bank=0 addr=0x05 len=1
+# [4316575800000] Mode=FAST_SWITCH: SPI WRITE Done
+# [4316575800000] stSwitch ID=0x00: SPI WRITE bank=0 addr=0xf0 len=1
+# [4321768000000] stSwitch ID=0x00: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [4465996000000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [4471188200000] T Mode=EEPROM_RW: SPI WRITE Done
+# [4471188200000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [4476380400000]       SET ADDR_L: SPI WRITE Done
+# [4476380400000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [4481572600000]       SET ADDR_H: SPI WRITE Done
+# [4481572600000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [4486764800000] gger EEPROM Read: SPI WRITE Done
+# [4688876300000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 1: Basic Sanity Check ---
+# [4714933500000]  READ FPGA_VER_H: PASS (0x94)
+# [4721760300000]  READ FPGA_VER_L: PASS (0x22)
+# 
+# --- Test 2: First Pattern Write ---
+# [4721760300000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
+# [4726952500000]    SET Mode=0x00: SPI WRITE Done
+# [4726952500000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [4732144700000]  SET ADDR_L=0x00: SPI WRITE Done
+# [4732144700000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [4737336900000]  SET ADDR_H=0x00: SPI WRITE Done
+# [4737336900000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
+# [4742529100000]  SET EEP_OP=0x01: SPI WRITE Done
+# [4742529100000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [4943102200000]    WRITE_PATTERN: SPI WRITE Done
+# [4999735700000] LED Frame Done detected
+# 
+# [ERROR] Simulation Timeout!
+# Last known state:
+#   err_count = 0
+# ** Note: $finish    : C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v(696)
+#    Time: 50 ms  Iteration: 0  Instance: /tb_system_top_v2
+# 1
+# Break in Module tb_system_top_v2 at C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v line 696
+# Compile of spi_eeprom_model_simple.v was successful with warnings.
+# Compile of spi_bit_engine.v was successful.
+# Compile of spi_master_top.v was successful.
+# Compile of spi_bit_engine_v2.v was successful.
+# Compile of spi_eeprom_iface.v was successful.
+# Compile of fifo.v was successful.
+# Compile of async_fifo_dc.v was successful.
+# Compile of spi_eeprom_iface_bridge.v was successful.
+# Compile of led32x32_matrix_driver.v was successful.
+# Compile of led32x32_buf_writer.v was successful.
+# Compile of spi_slave_top.v was successful.
+# Compile of dp_bram_256x32.v was successful.
+# Compile of pll2.v was successful.
+# Compile of pll.v was successful.
+# Compile of system_top.v was successful.
+# Compile of tb_spi_slave.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_system_top_v2
+# Loading work.system_top
+# Loading work.pll
+# Loading work.pll2
+# Loading work.dp_bram_256x32
+# Loading work.spi_slave_engine
+# Loading work.led32x32_row_streamer
+# Loading work.led32x32_matrix_driver
+# Loading work.spi_eeprom_iface_bridge
+# Loading work.async_fifo_dc
+# Loading work.fifo
+# Loading work.spi_eeprom_iface
+# Loading work.spi_bit_engine_v2
+# Loading work.spi_master_top
+# Loading work.spi_bit_engine_sim
+# Loading work.eeprom_m95p32_emu
+run -all
+# Warning! Wrong oscillator frequency; default to 2.08 MHz.
+# [408600000] 🚨 GPIO_LED[0] toggled (Frame Done)
+# [500783700000] System Ready - Starting Tests
+# 
+# ========================================
+#   System Top Complete Test (V2)
+# ========================================
+# 
+# 
+# --- Test 1: Basic Sanity Check ---
+# [507610400000]  READ FPGA_VER_H: PASS (0x94)
+# [514437200000]  READ FPGA_VER_L: PASS (0x22)
+# 
+# --- Test 2: First Pattern Write ---
+# [514437200000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
+# [519629400000]    SET Mode=0x00: SPI WRITE Done
+# [519629400000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [524821700000]  SET ADDR_L=0x00: SPI WRITE Done
+# [524821700000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [530013900000]  SET ADDR_H=0x00: SPI WRITE Done
+# [530013900000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
+# [535206100000]  SET EEP_OP=0x01: SPI WRITE Done
+# [535206100000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [735779100000]    WRITE_PATTERN: SPI WRITE Done
+# [792412700000] LED Frame Done detected
+# 
+# --- Test 3: Second Pattern Write (EEPROM_RW) ---
+# [798566400000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [803758600000] T Mode=EEPROM_RW: SPI WRITE Done
+# [803758600000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [808950800000]  SET ADDR_L=0x00: SPI WRITE Done
+# [808950800000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [814143000000]  SET ADDR_H=0x00: SPI WRITE Done
+# [814143000000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [1014716100000]    WRITE_PATTERN: SPI WRITE Done
+# 
+# --- Test 4: EEPROM Read Trigger ---
+# [1314133400000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [1319325600000] T Mode=EEPROM_RW: SPI WRITE Done
+# [1319325600000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [1324517800000]  SET ADDR_L=0x00: SPI WRITE Done
+# [1324517800000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [1329710000000]  SET ADDR_H=0x00: SPI WRITE Done
+# [1329710000000]  SET EEP_OP=READ: SPI WRITE bank=2 addr=0x02 len=1
+# [1334902300000]  SET EEP_OP=READ: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [1431054300000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [1436246500000] T Mode=EEPROM_RW: SPI WRITE Done
+# [1436246500000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [1441438700000]       SET ADDR_L: SPI WRITE Done
+# [1441438700000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [1446630900000]       SET ADDR_H: SPI WRITE Done
+# [1446630900000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [1451823100000] gger EEPROM Read: SPI WRITE Done
+#   ✅ Read Complete!
+# [1707299000000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 5: MODE_FAST_SWITCH ---
+# [1707299000000] Mode=FAST_SWITCH: SPI WRITE bank=0 addr=0x05 len=1
+# [1712491200000] Mode=FAST_SWITCH: SPI WRITE Done
+# [1712491200000] stSwitch ID=0x00: SPI WRITE bank=0 addr=0xf0 len=1
+# [1717683400000] stSwitch ID=0x00: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [1861911400000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [1867103600000] T Mode=EEPROM_RW: SPI WRITE Done
+# [1867103600000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [1872295800000]       SET ADDR_L: SPI WRITE Done
+# [1872295800000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [1877488000000]       SET ADDR_H: SPI WRITE Done
+# [1877488000000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [1882680200000] gger EEPROM Read: SPI WRITE Done
+# [2084791700000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 1: Basic Sanity Check ---
+# [2110848900000]  READ FPGA_VER_H: PASS (0x94)
+# [2117675700000]  READ FPGA_VER_L: PASS (0x22)
+# 
+# --- Test 2: First Pattern Write ---
+# [2117675700000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
+# [2122867900000]    SET Mode=0x00: SPI WRITE Done
+# [2122867900000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [2128060100000]  SET ADDR_L=0x00: SPI WRITE Done
+# [2128060100000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [2133252300000]  SET ADDR_H=0x00: SPI WRITE Done
+# [2133252300000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
+# [2138444500000]  SET EEP_OP=0x01: SPI WRITE Done
+# [2138444500000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [2339017600000]    WRITE_PATTERN: SPI WRITE Done
+# [2395651100000] LED Frame Done detected
+# 
+# --- Test 3: Second Pattern Write (EEPROM_RW) ---
+# [2401804800000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [2406997100000] T Mode=EEPROM_RW: SPI WRITE Done
+# [2406997100000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [2412189300000]  SET ADDR_L=0x00: SPI WRITE Done
+# [2412189300000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [2417381500000]  SET ADDR_H=0x00: SPI WRITE Done
+# [2417381500000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [2617954500000]    WRITE_PATTERN: SPI WRITE Done
+# 
+# --- Test 4: EEPROM Read Trigger ---
+# [2917371900000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [2922564100000] T Mode=EEPROM_RW: SPI WRITE Done
+# [2922564100000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [2927756300000]  SET ADDR_L=0x00: SPI WRITE Done
+# [2927756300000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [2932948500000]  SET ADDR_H=0x00: SPI WRITE Done
+# [2932948500000]  SET EEP_OP=READ: SPI WRITE bank=2 addr=0x02 len=1
+# [2938140700000]  SET EEP_OP=READ: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [3034292700000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [3039484900000] T Mode=EEPROM_RW: SPI WRITE Done
+# [3039484900000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [3044677100000]       SET ADDR_L: SPI WRITE Done
+# [3044677100000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [3049869300000]       SET ADDR_H: SPI WRITE Done
+# [3049869300000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [3055061500000] gger EEPROM Read: SPI WRITE Done
+# [3257173000000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 5: MODE_FAST_SWITCH ---
+# [3257173000000] Mode=FAST_SWITCH: SPI WRITE bank=0 addr=0x05 len=1
+# [3262365200000] Mode=FAST_SWITCH: SPI WRITE Done
+# [3262365200000] stSwitch ID=0x00: SPI WRITE bank=0 addr=0xf0 len=1
+# [3267557500000] stSwitch ID=0x00: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [3411785500000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [3416977700000] T Mode=EEPROM_RW: SPI WRITE Done
+# [3416977700000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [3422169900000]       SET ADDR_L: SPI WRITE Done
+# [3422169900000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [3427362100000]       SET ADDR_H: SPI WRITE Done
+# [3427362100000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [3432554300000] gger EEPROM Read: SPI WRITE Done
+# [3634665800000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 1: Basic Sanity Check ---
+# [3660723000000]  READ FPGA_VER_H: PASS (0x94)
+# [3667549800000]  READ FPGA_VER_L: PASS (0x22)
+# 
+# --- Test 2: First Pattern Write ---
+# [3667549800000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
+# [3672742000000]    SET Mode=0x00: SPI WRITE Done
+# [3672742000000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [3677934200000]  SET ADDR_L=0x00: SPI WRITE Done
+# [3677934200000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [3683126400000]  SET ADDR_H=0x00: SPI WRITE Done
+# [3683126400000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
+# [3688318600000]  SET EEP_OP=0x01: SPI WRITE Done
+# [3688318600000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [3888891700000]    WRITE_PATTERN: SPI WRITE Done
+# [3945525200000] LED Frame Done detected
+# 
+# --- Test 3: Second Pattern Write (EEPROM_RW) ---
+# [3951678900000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [3956871100000] T Mode=EEPROM_RW: SPI WRITE Done
+# [3956871100000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [3962063400000]  SET ADDR_L=0x00: SPI WRITE Done
+# [3962063400000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [3967255600000]  SET ADDR_H=0x00: SPI WRITE Done
+# [3967255600000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [4167828600000]    WRITE_PATTERN: SPI WRITE Done
+# 
+# --- Test 4: EEPROM Read Trigger ---
+# [4467246000000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [4472438200000] T Mode=EEPROM_RW: SPI WRITE Done
+# [4472438200000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [4477630400000]  SET ADDR_L=0x00: SPI WRITE Done
+# [4477630400000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [4482822600000]  SET ADDR_H=0x00: SPI WRITE Done
+# [4482822600000]  SET EEP_OP=READ: SPI WRITE bank=2 addr=0x02 len=1
+# [4488014800000]  SET EEP_OP=READ: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [4584166800000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [4589359000000] T Mode=EEPROM_RW: SPI WRITE Done
+# [4589359000000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [4594551200000]       SET ADDR_L: SPI WRITE Done
+# [4594551200000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [4599743400000]       SET ADDR_H: SPI WRITE Done
+# [4599743400000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [4604935600000] gger EEPROM Read: SPI WRITE Done
+# [4807047100000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 5: MODE_FAST_SWITCH ---
+# [4807047100000] Mode=FAST_SWITCH: SPI WRITE bank=0 addr=0x05 len=1
+# [4812239300000] Mode=FAST_SWITCH: SPI WRITE Done
+# [4812239300000] stSwitch ID=0x00: SPI WRITE bank=0 addr=0xf0 len=1
+# [4817431500000] stSwitch ID=0x00: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [4961659500000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [4966851800000] T Mode=EEPROM_RW: SPI WRITE Done
+# [4966851800000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [4972044000000]       SET ADDR_L: SPI WRITE Done
+# [4972044000000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [4977236200000]       SET ADDR_H: SPI WRITE Done
+# [4977236200000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [4982428400000] gger EEPROM Read: SPI WRITE Done
+# [5184539900000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 1: Basic Sanity Check ---
+# [5210597100000]  READ FPGA_VER_H: PASS (0x94)
+# [5217423900000]  READ FPGA_VER_L: PASS (0x22)
+# 
+# --- Test 2: First Pattern Write ---
+# [5217423900000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
+# [5222616100000]    SET Mode=0x00: SPI WRITE Done
+# [5222616100000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [5227808300000]  SET ADDR_L=0x00: SPI WRITE Done
+# [5227808300000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [5233000500000]  SET ADDR_H=0x00: SPI WRITE Done
+# [5233000500000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
+# [5238192700000]  SET EEP_OP=0x01: SPI WRITE Done
+# [5238192700000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [5438765800000]    WRITE_PATTERN: SPI WRITE Done
+# [5495399300000] LED Frame Done detected
+# 
+# --- Test 3: Second Pattern Write (EEPROM_RW) ---
+# [5501553000000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [5506745200000] T Mode=EEPROM_RW: SPI WRITE Done
+# [5506745200000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [5511937400000]  SET ADDR_L=0x00: SPI WRITE Done
+# [5511937400000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [5517129600000]  SET ADDR_H=0x00: SPI WRITE Done
+# [5517129600000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [5717702700000]    WRITE_PATTERN: SPI WRITE Done
+# 
+# --- Test 4: EEPROM Read Trigger ---
+# [6017120000000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [6022312300000] T Mode=EEPROM_RW: SPI WRITE Done
+# [6022312300000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [6027504500000]  SET ADDR_L=0x00: SPI WRITE Done
+# [6027504500000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [6032696700000]  SET ADDR_H=0x00: SPI WRITE Done
+# [6032696700000]  SET EEP_OP=READ: SPI WRITE bank=2 addr=0x02 len=1
+# [6037888900000]  SET EEP_OP=READ: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [6134040900000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [6139233100000] T Mode=EEPROM_RW: SPI WRITE Done
+# [6139233100000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [6144425300000]       SET ADDR_L: SPI WRITE Done
+# [6144425300000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [6149617500000]       SET ADDR_H: SPI WRITE Done
+# [6149617500000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [6154809700000] gger EEPROM Read: SPI WRITE Done
+# [6356921200000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 5: MODE_FAST_SWITCH ---
+# [6356921200000] Mode=FAST_SWITCH: SPI WRITE bank=0 addr=0x05 len=1
+# [6362113400000] Mode=FAST_SWITCH: SPI WRITE Done
+# [6362113400000] stSwitch ID=0x00: SPI WRITE bank=0 addr=0xf0 len=1
+# [6367305600000] stSwitch ID=0x00: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [6511533600000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [6516725800000] T Mode=EEPROM_RW: SPI WRITE Done
+# [6516725800000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [6521918000000]       SET ADDR_L: SPI WRITE Done
+# [6521918000000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [6527110300000]       SET ADDR_H: SPI WRITE Done
+# [6527110300000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [6532302500000] gger EEPROM Read: SPI WRITE Done
+# [6734414000000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 1: Basic Sanity Check ---
+# [6760471200000]  READ FPGA_VER_H: PASS (0x94)
+# [6767298000000]  READ FPGA_VER_L: PASS (0x22)
+# 
+# --- Test 2: First Pattern Write ---
+# [6767298000000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
+# [6772490200000]    SET Mode=0x00: SPI WRITE Done
+# [6772490200000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [6777682400000]  SET ADDR_L=0x00: SPI WRITE Done
+# [6777682400000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [6782874600000]  SET ADDR_H=0x00: SPI WRITE Done
+# [6782874600000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
+# [6788066800000]  SET EEP_OP=0x01: SPI WRITE Done
+# [6788066800000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [6988639900000]    WRITE_PATTERN: SPI WRITE Done
+# [7045273400000] LED Frame Done detected
+# 
+# --- Test 3: Second Pattern Write (EEPROM_RW) ---
+# [7051427100000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [7056619300000] T Mode=EEPROM_RW: SPI WRITE Done
+# [7056619300000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [7061811500000]  SET ADDR_L=0x00: SPI WRITE Done
+# [7061811500000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [7067003700000]  SET ADDR_H=0x00: SPI WRITE Done
+# [7067003700000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [7267576800000]    WRITE_PATTERN: SPI WRITE Done
+# 
+# --- Test 4: EEPROM Read Trigger ---
+# [7566994100000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [7572186300000] T Mode=EEPROM_RW: SPI WRITE Done
+# [7572186300000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [7577378600000]  SET ADDR_L=0x00: SPI WRITE Done
+# [7577378600000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [7582570800000]  SET ADDR_H=0x00: SPI WRITE Done
+# [7582570800000]  SET EEP_OP=READ: SPI WRITE bank=2 addr=0x02 len=1
+# [7587763000000]  SET EEP_OP=READ: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [7683915000000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [7689107200000] T Mode=EEPROM_RW: SPI WRITE Done
+# [7689107200000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [7694299400000]       SET ADDR_L: SPI WRITE Done
+# [7694299400000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [7699491600000]       SET ADDR_H: SPI WRITE Done
+# [7699491600000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [7704683800000] gger EEPROM Read: SPI WRITE Done
+# [7906795300000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 5: MODE_FAST_SWITCH ---
+# [7906795300000] Mode=FAST_SWITCH: SPI WRITE bank=0 addr=0x05 len=1
+# [7911987500000] Mode=FAST_SWITCH: SPI WRITE Done
+# [7911987500000] stSwitch ID=0x00: SPI WRITE bank=0 addr=0xf0 len=1
+# [7917179700000] stSwitch ID=0x00: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [8061407700000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [8066599900000] T Mode=EEPROM_RW: SPI WRITE Done
+# [8066599900000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [8071792100000]       SET ADDR_L: SPI WRITE Done
+# [8071792100000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [8076984300000]       SET ADDR_H: SPI WRITE Done
+# [8076984300000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [8082176600000] gger EEPROM Read: SPI WRITE Done
+# [8284288100000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 1: Basic Sanity Check ---
+# [8310345200000]  READ FPGA_VER_H: PASS (0x94)
+# [8317172000000]  READ FPGA_VER_L: PASS (0x22)
+# 
+# --- Test 2: First Pattern Write ---
+# [8317172000000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
+# [8322364200000]    SET Mode=0x00: SPI WRITE Done
+# [8322364200000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [8327556500000]  SET ADDR_L=0x00: SPI WRITE Done
+# [8327556500000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [8332748700000]  SET ADDR_H=0x00: SPI WRITE Done
+# [8332748700000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
+# [8337940900000]  SET EEP_OP=0x01: SPI WRITE Done
+# [8337940900000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [8538513900000]    WRITE_PATTERN: SPI WRITE Done
+# [8595147500000] LED Frame Done detected
+# 
+# --- Test 3: Second Pattern Write (EEPROM_RW) ---
+# [8601301200000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [8606493400000] T Mode=EEPROM_RW: SPI WRITE Done
+# [8606493400000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [8611685600000]  SET ADDR_L=0x00: SPI WRITE Done
+# [8611685600000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [8616877800000]  SET ADDR_H=0x00: SPI WRITE Done
+# [8616877800000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [8817450900000]    WRITE_PATTERN: SPI WRITE Done
+# 
+# --- Test 4: EEPROM Read Trigger ---
+# [9116868200000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [9122060400000] T Mode=EEPROM_RW: SPI WRITE Done
+# [9122060400000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [9127252600000]  SET ADDR_L=0x00: SPI WRITE Done
+# [9127252600000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [9132444800000]  SET ADDR_H=0x00: SPI WRITE Done
+# [9132444800000]  SET EEP_OP=READ: SPI WRITE bank=2 addr=0x02 len=1
+# [9137637100000]  SET EEP_OP=READ: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [9233789100000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [9238981300000] T Mode=EEPROM_RW: SPI WRITE Done
+# [9238981300000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [9244173500000]       SET ADDR_L: SPI WRITE Done
+# [9244173500000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [9249365700000]       SET ADDR_H: SPI WRITE Done
+# [9249365700000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [9254557900000] gger EEPROM Read: SPI WRITE Done
+# [9456669400000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 5: MODE_FAST_SWITCH ---
+# [9456669400000] Mode=FAST_SWITCH: SPI WRITE bank=0 addr=0x05 len=1
+# [9461861600000] Mode=FAST_SWITCH: SPI WRITE Done
+# [9461861600000] stSwitch ID=0x00: SPI WRITE bank=0 addr=0xf0 len=1
+# [9467053800000] stSwitch ID=0x00: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [9611281800000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [9616474000000] T Mode=EEPROM_RW: SPI WRITE Done
+# [9616474000000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [9621666200000]       SET ADDR_L: SPI WRITE Done
+# [9621666200000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [9626858400000]       SET ADDR_H: SPI WRITE Done
+# [9626858400000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [9632050600000] gger EEPROM Read: SPI WRITE Done
+# [9834162100000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 1: Basic Sanity Check ---
+# [9860219300000]  READ FPGA_VER_H: PASS (0x94)
+# [9867046100000]  READ FPGA_VER_L: PASS (0x22)
+# 
+# --- Test 2: First Pattern Write ---
+# [9867046100000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
+# [9872238300000]    SET Mode=0x00: SPI WRITE Done
+# [9872238300000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [9877430500000]  SET ADDR_L=0x00: SPI WRITE Done
+# [9877430500000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [9882622800000]  SET ADDR_H=0x00: SPI WRITE Done
+# [9882622800000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
+# [9887815000000]  SET EEP_OP=0x01: SPI WRITE Done
+# [9887815000000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [10088388000000]    WRITE_PATTERN: SPI WRITE Done
+# [10145021600000] LED Frame Done detected
+# 
+# --- Test 3: Second Pattern Write (EEPROM_RW) ---
+# [10151175300000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [10156367500000] T Mode=EEPROM_RW: SPI WRITE Done
+# [10156367500000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [10161559700000]  SET ADDR_L=0x00: SPI WRITE Done
+# [10161559700000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [10166751900000]  SET ADDR_H=0x00: SPI WRITE Done
+# [10166751900000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [10367325000000]    WRITE_PATTERN: SPI WRITE Done
+# 
+# --- Test 4: EEPROM Read Trigger ---
+# [10666742300000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [10671934500000] T Mode=EEPROM_RW: SPI WRITE Done
+# [10671934500000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [10677126700000]  SET ADDR_L=0x00: SPI WRITE Done
+# [10677126700000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [10682318900000]  SET ADDR_H=0x00: SPI WRITE Done
+# [10682318900000]  SET EEP_OP=READ: SPI WRITE bank=2 addr=0x02 len=1
+# [10687511100000]  SET EEP_OP=READ: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [10783663100000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [10788855400000] T Mode=EEPROM_RW: SPI WRITE Done
+# [10788855400000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [10794047600000]       SET ADDR_L: SPI WRITE Done
+# [10794047600000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [10799239800000]       SET ADDR_H: SPI WRITE Done
+# [10799239800000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [10804432000000] gger EEPROM Read: SPI WRITE Done
+# [11006543500000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 5: MODE_FAST_SWITCH ---
+# [11006543500000] Mode=FAST_SWITCH: SPI WRITE bank=0 addr=0x05 len=1
+# [11011735700000] Mode=FAST_SWITCH: SPI WRITE Done
+# [11011735700000] stSwitch ID=0x00: SPI WRITE bank=0 addr=0xf0 len=1
+# [11016927900000] stSwitch ID=0x00: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [11161155900000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [11166348100000] T Mode=EEPROM_RW: SPI WRITE Done
+# [11166348100000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [11171540300000]       SET ADDR_L: SPI WRITE Done
+# [11171540300000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [11176732500000]       SET ADDR_H: SPI WRITE Done
+# [11176732500000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [11181924700000] gger EEPROM Read: SPI WRITE Done
+# [11384036200000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 1: Basic Sanity Check ---
+# [11410093400000]  READ FPGA_VER_H: PASS (0x94)
+# [11416920200000]  READ FPGA_VER_L: PASS (0x22)
+# 
+# --- Test 2: First Pattern Write ---
+# [11416920200000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
+# [11422112400000]    SET Mode=0x00: SPI WRITE Done
+# [11422112400000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [11427304600000]  SET ADDR_L=0x00: SPI WRITE Done
+# [11427304600000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [11432496800000]  SET ADDR_H=0x00: SPI WRITE Done
+# [11432496800000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
+# [11437689000000]  SET EEP_OP=0x01: SPI WRITE Done
+# [11437689000000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [11638262100000]    WRITE_PATTERN: SPI WRITE Done
+# [11694895600000] LED Frame Done detected
+# 
+# --- Test 3: Second Pattern Write (EEPROM_RW) ---
+# [11701049400000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [11706241600000] T Mode=EEPROM_RW: SPI WRITE Done
+# [11706241600000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [11711433800000]  SET ADDR_L=0x00: SPI WRITE Done
+# [11711433800000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [11716626000000]  SET ADDR_H=0x00: SPI WRITE Done
+# [11716626000000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [11917199100000]    WRITE_PATTERN: SPI WRITE Done
+# 
+# --- Test 4: EEPROM Read Trigger ---
+# [12216616400000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [12221808600000] T Mode=EEPROM_RW: SPI WRITE Done
+# [12221808600000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [12227000800000]  SET ADDR_L=0x00: SPI WRITE Done
+# [12227000800000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [12232193000000]  SET ADDR_H=0x00: SPI WRITE Done
+# [12232193000000]  SET EEP_OP=READ: SPI WRITE bank=2 addr=0x02 len=1
+# [12237385200000]  SET EEP_OP=READ: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [12333537200000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [12338729400000] T Mode=EEPROM_RW: SPI WRITE Done
+# [12338729400000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [12343921600000]       SET ADDR_L: SPI WRITE Done
+# [12343921600000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [12349113900000]       SET ADDR_H: SPI WRITE Done
+# [12349113900000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [12354306100000] gger EEPROM Read: SPI WRITE Done
+# [12556417600000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 5: MODE_FAST_SWITCH ---
+# [12556417600000] Mode=FAST_SWITCH: SPI WRITE bank=0 addr=0x05 len=1
+# [12561609800000] Mode=FAST_SWITCH: SPI WRITE Done
+# [12561609800000] stSwitch ID=0x00: SPI WRITE bank=0 addr=0xf0 len=1
+# [12566802000000] stSwitch ID=0x00: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [12711030000000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [12716222200000] T Mode=EEPROM_RW: SPI WRITE Done
+# [12716222200000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [12721414400000]       SET ADDR_L: SPI WRITE Done
+# [12721414400000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [12726606600000]       SET ADDR_H: SPI WRITE Done
+# [12726606600000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [12731798800000] gger EEPROM Read: SPI WRITE Done
+# [12933910300000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 1: Basic Sanity Check ---
+# [12959967500000]  READ FPGA_VER_H: PASS (0x94)
+# [12966794300000]  READ FPGA_VER_L: PASS (0x22)
+# 
+# --- Test 2: First Pattern Write ---
+# [12966794300000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
+# [12971986500000]    SET Mode=0x00: SPI WRITE Done
+# [12971986500000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [12977178700000]  SET ADDR_L=0x00: SPI WRITE Done
+# [12977178700000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [12982370900000]  SET ADDR_H=0x00: SPI WRITE Done
+# [12982370900000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
+# [12987563100000]  SET EEP_OP=0x01: SPI WRITE Done
+# [12987563100000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [13188136200000]    WRITE_PATTERN: SPI WRITE Done
+# [13244769700000] LED Frame Done detected
+# 
+# --- Test 3: Second Pattern Write (EEPROM_RW) ---
+# [13250923500000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [13256115700000] T Mode=EEPROM_RW: SPI WRITE Done
+# [13256115700000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [13261307900000]  SET ADDR_L=0x00: SPI WRITE Done
+# [13261307900000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [13266500100000]  SET ADDR_H=0x00: SPI WRITE Done
+# [13266500100000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [13467073200000]    WRITE_PATTERN: SPI WRITE Done
+# 
+# --- Test 4: EEPROM Read Trigger ---
+# [13766490500000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [13771682700000] T Mode=EEPROM_RW: SPI WRITE Done
+# [13771682700000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [13776874900000]  SET ADDR_L=0x00: SPI WRITE Done
+# [13776874900000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [13782067100000]  SET ADDR_H=0x00: SPI WRITE Done
+# [13782067100000]  SET EEP_OP=READ: SPI WRITE bank=2 addr=0x02 len=1
+# [13787259300000]  SET EEP_OP=READ: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [13883411300000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [13888603500000] T Mode=EEPROM_RW: SPI WRITE Done
+# [13888603500000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [13893795700000]       SET ADDR_L: SPI WRITE Done
+# [13893795700000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [13898987900000]       SET ADDR_H: SPI WRITE Done
+# [13898987900000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [13904180200000] gger EEPROM Read: SPI WRITE Done
+# [14106291700000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 5: MODE_FAST_SWITCH ---
+# [14106291700000] Mode=FAST_SWITCH: SPI WRITE bank=0 addr=0x05 len=1
+# [14111483900000] Mode=FAST_SWITCH: SPI WRITE Done
+# [14111483900000] stSwitch ID=0x00: SPI WRITE bank=0 addr=0xf0 len=1
+# [14116676100000] stSwitch ID=0x00: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [14260904100000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [14266096300000] T Mode=EEPROM_RW: SPI WRITE Done
+# [14266096300000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [14271288500000]       SET ADDR_L: SPI WRITE Done
+# [14271288500000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [14276480700000]       SET ADDR_H: SPI WRITE Done
+# [14276480700000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [14281672900000] gger EEPROM Read: SPI WRITE Done
+# [14483784400000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 1: Basic Sanity Check ---
+# [14509841600000]  READ FPGA_VER_H: PASS (0x94)
+# [14516668400000]  READ FPGA_VER_L: PASS (0x22)
+# 
+# --- Test 2: First Pattern Write ---
+# [14516668400000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
+# [14521860600000]    SET Mode=0x00: SPI WRITE Done
+# [14521860600000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [14527052800000]  SET ADDR_L=0x00: SPI WRITE Done
+# [14527052800000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [14532245000000]  SET ADDR_H=0x00: SPI WRITE Done
+# [14532245000000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
+# [14537437200000]  SET EEP_OP=0x01: SPI WRITE Done
+# [14537437200000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [14738010300000]    WRITE_PATTERN: SPI WRITE Done
+# [14794643800000] LED Frame Done detected
+# 
+# --- Test 3: Second Pattern Write (EEPROM_RW) ---
+# [14800797600000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [14805989800000] T Mode=EEPROM_RW: SPI WRITE Done
+# [14805989800000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [14811182000000]  SET ADDR_L=0x00: SPI WRITE Done
+# [14811182000000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [14816374200000]  SET ADDR_H=0x00: SPI WRITE Done
+# [14816374200000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
+# [15016947200000]    WRITE_PATTERN: SPI WRITE Done
+# 
+# --- Test 4: EEPROM Read Trigger ---
+# [15316364600000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [15321556800000] T Mode=EEPROM_RW: SPI WRITE Done
+# [15321556800000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
+# [15326749000000]  SET ADDR_L=0x00: SPI WRITE Done
+# [15326749000000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
+# [15331941200000]  SET ADDR_H=0x00: SPI WRITE Done
+# [15331941200000]  SET EEP_OP=READ: SPI WRITE bank=2 addr=0x02 len=1
+# [15337133400000]  SET EEP_OP=READ: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [15433285400000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [15438477600000] T Mode=EEPROM_RW: SPI WRITE Done
+# [15438477600000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [15443669800000]       SET ADDR_L: SPI WRITE Done
+# [15443669800000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [15448862000000]       SET ADDR_H: SPI WRITE Done
+# [15448862000000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [15454054200000] gger EEPROM Read: SPI WRITE Done
+# [15656165700000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# --- Test 5: MODE_FAST_SWITCH ---
+# [15656165700000] Mode=FAST_SWITCH: SPI WRITE bank=0 addr=0x05 len=1
+# [15661358000000] Mode=FAST_SWITCH: SPI WRITE Done
+# [15661358000000] stSwitch ID=0x00: SPI WRITE bank=0 addr=0xf0 len=1
+# [15666550200000] stSwitch ID=0x00: SPI WRITE Done
+# 
+# --- Test 4: MCU ReadBack EEPROM Data ---
+# [15810778200000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
+# [15815970400000] T Mode=EEPROM_RW: SPI WRITE Done
+# [15815970400000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
+# [15821162600000]       SET ADDR_L: SPI WRITE Done
+# [15821162600000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
+# [15826354800000]       SET ADDR_H: SPI WRITE Done
+# [15826354800000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
+# [15831547000000] gger EEPROM Read: SPI WRITE Done
+# [16033658500000] eadBack from PAT: READ 128 bytes from 0x00
+# ✅ Test 4 PASSED - All 128 bytes match!
+# 
+# ========================================
+#   TEST SUMMARY (V2 Migration)
+# ========================================
+# Total Errors: 0
+# ========================================
+# 🎉 ALL TESTS PASSED ✓
+# ========================================
+# 
+# ** Note: $finish    : C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v(689)
+#    Time: 160529888940 ps  Iteration: 0  Instance: /tb_system_top_v2
+# 1
+# Break in Module tb_system_top_v2 at C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v line 689
+# End time: 17:59:08 on Oct 30,2025, Elapsed time: 0:13:47
+# Errors: 0, Warnings: 1

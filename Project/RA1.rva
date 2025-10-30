@@ -1,0 +1,47 @@
+<!DOCTYPE ispTLA>
+<ispTLA>
+ <CreationDate>?g?G ?Q?? 21 10:33:07 2025</CreationDate>
+ <XCFFileName/>
+ <CableSetting>
+  <IsTRSTConnected val="false"/>
+  <TRSTSetting val="0"/>
+  <IsBSCANConnected val="false"/>
+  <BSCANSetting val="0"/>
+  <CableType val="USB2"/>
+  <PortAddress val="0"/>
+  <PortSetting val="0"/>
+  <TCKDelay val="1"/>
+ </CableSetting>
+ <DeviceCount>1</DeviceCount>
+ <Device>
+  <DeviceIndex>0</DeviceIndex>
+  <DeviceName>1. LCMXO3LF-6900C</DeviceName>
+  <DeviceID>0x612BD043</DeviceID>
+  <HasIspTRACY>true</HasIspTRACY>
+  <HasJTAG2WB>false</HasJTAG2WB>
+  <SERDES/>
+  <IRBypassLen>8</IRBypassLen>
+  <RVLFileName>debugspi.rvl</RVLFileName>
+  <RVSFileName>debugspi.rvs</RVSFileName>
+  <LACoreCount>1</LACoreCount>
+  <WinUI CoreIndex="0">
+   <TraceSigTreeData>
+    <TraceSignal IsHidden="false" Name="sclk" NodeType="0" PortIndex="0"/>
+    <TraceSignal IsHidden="false" Name="cs_n" NodeType="0" PortIndex="1"/>
+    <TraceSignal IsHidden="false" Name="mosi" NodeType="0" PortIndex="2"/>
+    <TraceSignal IsHidden="false" Name="miso" NodeType="0" PortIndex="3"/>
+    <TraceSignal IsHidden="false" Name="eep_sclk" NodeType="0" PortIndex="4"/>
+    <TraceSignal IsHidden="false" Name="eep_cs_n" NodeType="0" PortIndex="5"/>
+    <TraceSignal IsHidden="false" Name="eep_dq0" NodeType="0" PortIndex="6"/>
+    <TraceSignal IsHidden="false" Name="eep_dq1" NodeType="0" PortIndex="7"/>
+    <TraceSignal IsHidden="false" Name="eep_dq2" NodeType="0" PortIndex="8"/>
+    <TraceSignal IsHidden="false" Name="eep_dq3" NodeType="0" PortIndex="9"/>
+   </TraceSigTreeData>
+   <TriggerUI UserSelect="0" PreSelectType="0" PreSelect="1" UserSelectPos="0"/>
+   <CoreRun Run="true"/>
+   <CoreWndUIData>
+    <ClockFrequency Unit="ns" Frequency="-1.0"/>
+   </CoreWndUIData>
+  </WinUI>
+ </Device>
+</ispTLA>

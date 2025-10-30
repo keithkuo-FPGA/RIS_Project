@@ -1,0 +1,77 @@
+<Project ModBy="Analyzer" Name="C:/Keith/FPGA/TMY/RIS/RIS_Project4/Project/debugspi.rvs" Date="2025-10-21">
+ <Core Name="system_top_LA0">
+  <Setting>
+   <Capture SamplesPerTrig="4096" NumTrigsCap="1"/>
+   <Event EventCnt="0" CntEnableRun="0"/>
+   <TrigSetting PreTrgSamples="" AND_ALL="0" PostTrgSamples="" TURadix="0"/>
+  </Setting>
+  <Dataset Name="Base">
+   <Trace>
+    <Sig Name="eep_sclk"/>
+    <Sig Name="eep_cs_n"/>
+    <Sig Name="eep_dq0"/>
+    <Sig Name="eep_dq1"/>
+    <Sig Name="eep_dq2"/>
+    <Sig Name="eep_dq3"/>
+    <Bus Name="u_eep/u_core/state" Radix="0">
+     <Sig Name="u_eep/u_core/state:0"/>
+     <Sig Name="u_eep/u_core/state:1"/>
+     <Sig Name="u_eep/u_core/state:2"/>
+    </Bus>
+    <Bus Name="u_eep/u_core/erase_type" Radix="0">
+     <Sig Name="u_eep/u_core/erase_type:0"/>
+     <Sig Name="u_eep/u_core/erase_type:1"/>
+    </Bus>
+    <Bus Name="u_eep/u_core/spi_tx_bits" Radix="0">
+     <Sig Name="u_eep/u_core/spi_tx_bits:0"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:1"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:2"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:3"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:4"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:5"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:6"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:7"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:8"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:9"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:10"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:11"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:12"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:13"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:14"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:15"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:16"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:17"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:18"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:19"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:20"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:21"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:22"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:23"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:24"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:25"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:26"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:27"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:28"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:29"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:30"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:31"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:32"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:33"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:34"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:35"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:36"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:37"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:38"/>
+     <Sig Name="u_eep/u_core/spi_tx_bits:39"/>
+    </Bus>
+    <Sig Name="u_eep/u_core/spi_done"/>
+    <Sig Name="u_eep/u_core/spi_busy"/>
+    <Sig Name="u_eep/u_core/spi_keep_cs"/>
+   </Trace>
+   <Trigger>
+    <TU Operator="7" Name="TU1" ID="1" Value="0" Radix="0"/>
+    <TE Enable="1" Expression="TU1" Name="TE1" ID="1"/>
+   </Trigger>
+  </Dataset>
+ </Core>
+</Project>
