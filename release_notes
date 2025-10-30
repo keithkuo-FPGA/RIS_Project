@@ -1,0 +1,49 @@
+RIS Processor [] release notes
+
+Keith Kuo - keith_kuo@tmytek.com
+Date: 30/10/2025
+
+Lattice Diamond 3.13.0.56.2
+Target Devices: LCMXO3LF-6900C
+
+Description: 
+
+Hierarchy: + system_top (system_top.v)
+           |- spi_slave_engine (spi_slave_engine.v)
+           |- led32x32_matrix_driver (led32x32_matrix_driver.v)
+           |- led32x32_row_streamer (led32x32_buf_writer.v)
+           |- dp_bram_256x32 (dp_bram_256x32.v)
+           |+ spi_eeprom_iface_bridge (spi_eeprom_iface_bridge.v)
+            |+ spi_eeprom_iface (spi_eeprom_iface.v)
+             |- spi_bit_engine_v2 (spi_bit_engine_v2.v)
+            |+ async_fifo_dc (async_fifo_dc.v)
+             |- Lattice FIFO (fifo.v)
+           
+
+Testbench: 
+
+Constraints: 
+             eeprom_spi_multicycle.sdc
+             
+
+Company_ID:
+0 - Unknown
+1 - TMYTEK
+
+Model_ID:
+0 - Unknown
+1 - 
+
+
+Board_ID:
+0 - Unknown
+1 - 
+
+
+Hardware_ID:
+0 - Unknown
+1 - First edition
+
+Revision: (MAX = 255.255.65535)
+0.0.0001 - Initial release
+0.0.0002 - 
