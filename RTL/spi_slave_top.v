@@ -106,8 +106,8 @@ initial begin
         mem_rx_pat[i] = 8'h00;
         mem_rx_eep[i] = 8'h00;
     end
-    mem_tx_sys[8'h00] = 8'h94;  // example timestamp high byte
-    mem_tx_sys[8'h01] = 8'h22;  // example timestamp low byte
+    mem_tx_sys[8'h00] = 8'h94;  // for 2000-01-01
+    mem_tx_sys[8'h01] = 8'h25;  //
 
     // EEPROM bank default values
     mem_tx_eep[8'h02] = 8'h00;  // Operation: 0 = none

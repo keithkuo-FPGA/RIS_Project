@@ -1,0 +1,1788 @@
+
+          Lattice Mapping Report File for Design Module 'system_top'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO3LF -p LCMXO3LF-6900C -t CABGA256 -s 5 -oc
+     Commercial project_impl1.ngd -o project_impl1_map.ncd -pr project_impl1.prf
+     -mp project_impl1.mrp -lpf C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/Proje
+     ct/impl1/project_impl1_synplify.lpf -lpf
+     C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/Project/project.lpf -c 0 -gui
+     -msgset C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/Project/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO3LF-6900CCABGA256
+Target Performance:   5
+Mapper:  xo3c00f,  version:  Diamond (64-bit) 3.13.0.56.2
+Mapped on:  10/31/25  15:25:14
+
+Design Summary
+--------------
+
+   Number of registers:   1142 out of  7485 (15%)
+      PFU registers:         1095 out of  6864 (16%)
+      PIO registers:           47 out of   621 (8%)
+   Number of SLICEs:       960 out of  3432 (28%)
+      SLICEs as Logic/ROM:    864 out of  3432 (25%)
+      SLICEs as RAM:           96 out of  2574 (4%)
+      SLICEs as Carry:        169 out of  3432 (5%)
+   Number of LUT4s:        1908 out of  6864 (28%)
+      Number used as logic LUTs:        1378
+      Number used as distributed RAM:   192
+      Number used as ripple logic:      338
+      Number used as shift registers:     0
+   Number of PIO sites used: 90 + 4(JTAG) out of 207 (45%)
+   Number of block RAMs:  9 out of 26 (35%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        Yes
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : Yes
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  2 out of 2 (100%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  5
+     Net Osc_Clk: 2 loads, 2 rising, 0 falling (Driver: OSCH_u0 )
+     Net x2osc_clk: 533 loads, 533 rising, 0 falling (Driver: pll_u0/PLLInst_0 )
+
+                                    Page 1
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+Design Summary (cont)
+---------------------
+     
+     Net eif_clk_x2: 125 loads, 125 rising, 0 falling (Driver: pll_u1/PLLInst_0
+     )
+     Net efb_i2c_prgrm_u0/i2c1_scli: 1 loads, 1 rising, 0 falling (Driver: PIO
+     prgrm_scl )
+     Net sclk_c: 106 loads, 70 rising, 36 falling (Driver: PIO sclk )
+   Number of Clock Enables:  103
+     Net sys_rst_n_c: 6 loads, 6 LSLICEs
+     Net bram_we_a_7: 19 loads, 19 LSLICEs
+     Net un2_pat_done_rise: 1 loads, 1 LSLICEs
+     Net N_30: 32 loads, 0 LSLICEs
+     Net cfg_tx_bank9: 2 loads, 2 LSLICEs
+     Net un1_state_2_i_o3_i_o2: 1 loads, 0 LSLICEs
+     Net u_eep/u_core/spi_master_i/N_142_3: 2 loads, 2 LSLICEs
+     Net u_eep/u_core/spi_master_i/sh_rx_1_sqmuxa_0_o2_i_o2_0_RNI02CR1: 4 loads,
+     4 LSLICEs
+     Net u_eep/u_core/spi_master_i/un1_state_13_i_0: 16 loads, 16 LSLICEs
+     Net u_eep/u_core/spi_master_i/un1_state_14_i: 4 loads, 4 LSLICEs
+     Net u_eep/u_core/spi_master_i/N_223_i: 1 loads, 1 LSLICEs
+     Net u_eep/u_core/spi_master_i/un1_state_7_i_0_0: 1 loads, 1 LSLICEs
+     Net u_eep/u_core/spi_master_i/N_142_2: 2 loads, 2 LSLICEs
+     Net u_eep/u_core/spi_master_i/N_62_i: 9 loads, 9 LSLICEs
+     Net N_2136_i: 1 loads, 0 LSLICEs
+     Net u_eep/u_core/state[0]: 1 loads, 1 LSLICEs
+     Net u_eep/u_core/N_39: 4 loads, 4 LSLICEs
+     Net u_eep/u_core/un1_state_6_i: 1 loads, 1 LSLICEs
+     Net u_eep/u_core/dummy_cnte: 3 loads, 3 LSLICEs
+     Net u_eep/u_core/un1_state_16_i: 1 loads, 1 LSLICEs
+     Net u_eep/u_core/un1_state_20_i: 17 loads, 17 LSLICEs
+     Net u_eep/u_core/un1_spi_bit_cnt_0_sqmuxa_4_i_0: 1 loads, 1 LSLICEs
+     Net u_eep/u_core/un1_spi_auto_reload_1_sqmuxa_0: 1 loads, 1 LSLICEs
+     Net u_eep/u_core/un1_state_8_i: 1 loads, 1 LSLICEs
+     Net u_eep/u_core/int_erase_ctrl_0_sqmuxa: 2 loads, 2 LSLICEs
+     Net u_eep/u_core/data_cntr_inte: 6 loads, 6 LSLICEs
+     Net u_eep/u_rx_fifo/wr_en_ip: 1 loads, 0 LSLICEs
+     Net u_eep/rx_state_ns[0]: 2 loads, 0 LSLICEs
+     Net u_eep/rx_state[0]: 4 loads, 4 LSLICEs
+     Net u_eep/u_tx_fifo/wr_en_ip: 1 loads, 0 LSLICEs
+     Net u_eep/u_tx_fifo/rd_en_ip: 2 loads, 0 LSLICEs
+     Net u_eep/addr_sys4: 10 loads, 10 LSLICEs
+     Net u_eep/addr_req_edge_eif: 10 loads, 10 LSLICEs
+     Net u_eep/tx_rd_en_q: 4 loads, 4 LSLICEs
+     Net u_eep/N_537_1_i: 1 loads, 1 LSLICEs
+     Net u_eep/un1_core_wdata_vld: 1 loads, 1 LSLICEs
+     Net u_drv/un1_refresh_pulse_d_2_sqmuxa_o: 16 loads, 16 LSLICEs
+     Net u_drv/N_1734_i: 7 loads, 7 LSLICEs
+     Net u_drv/sync_req_d_1_sqmuxa_1_i_0: 1 loads, 1 LSLICEs
+     Net u_drv/un1_sync_req_d_1_sqmuxa_1_i: 3 loads, 3 LSLICEs
+     Net u_drv/N_1736_i: 1 loads, 1 LSLICEs
+     Net u_drv/un1_row_valid_2_0_a3: 16 loads, 16 LSLICEs
+     Net u_drv/un1_row_valid_1_0_a3: 16 loads, 16 LSLICEs
+     Net u_drv/N_1738_i: 9 loads, 9 LSLICEs
+     Net u_drv/N_2255_i: 2 loads, 0 LSLICEs
+     Net u_stream/state[1]: 1 loads, 1 LSLICEs
+     Net u_stream/state_RNI83O81_0[1]: 3 loads, 3 LSLICEs
+     Net u_stream/pipe_vld[1]_RNIIFCK1: 4 loads, 4 LSLICEs
+
+                                    Page 2
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+Design Summary (cont)
+---------------------
+     Net u_stream/N_2037_i: 19 loads, 19 LSLICEs
+     Net u_stream/N_49_i: 4 loads, 4 LSLICEs
+     Net u_stream/issue_rowe: 10 loads, 10 LSLICEs
+     Net u_stream/N_38_i: 1 loads, 1 LSLICEs
+     Net u_spi/un3_mem_rx_sys_cry_7_0_RNI6ID82: 2 loads, 0 LSLICEs
+     Net u_spi/cfg_rx_re_o: 4 loads, 4 LSLICEs
+     Net u_spi.addr_1_sqmuxa: 6 loads, 5 LSLICEs
+     Net u_spi/un1_pat_rx_done_clr_i_0: 2 loads, 2 LSLICEs
+     Net cfg_pipe_valid: 2 loads, 2 LSLICEs
+     Net u_spi/un1_use_rx_for_read59_i: 4 loads, 4 LSLICEs
+     Net u_spi/tx_byte_cnt_1_sqmuxa_o: 4 loads, 4 LSLICEs
+     Net u_spi/CO0: 5 loads, 5 LSLICEs
+     Net u_spi/cmd_0_sqmuxa: 2 loads, 2 LSLICEs
+     Net u_spi/rx_bit_cnt11: 10 loads, 10 LSLICEs
+     Net u_spi/un1_rx_bit_cnt12_i: 4 loads, 4 LSLICEs
+     Net u_spi/un1_rx_shift9_6: 4 loads, 4 LSLICEs
+     Net u_spi/un1_rx_shift9_7: 4 loads, 4 LSLICEs
+     Net u_spi/un1_rx_shift9_8: 4 loads, 4 LSLICEs
+     Net u_spi/un1_rx_shift9_9: 4 loads, 4 LSLICEs
+     Net u_spi/un1_rx_shift9_1: 4 loads, 4 LSLICEs
+     Net u_spi/un1_rx_shift9_2: 4 loads, 4 LSLICEs
+     Net u_spi/un1_rx_shift9_3: 4 loads, 4 LSLICEs
+     Net u_spi/un1_rx_shift9_4: 4 loads, 4 LSLICEs
+     Net led1_q_1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net led0_q_1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net u_spi/un1_rst_n_0_a2: 1 loads, 0 LSLICEs
+     Net u_spi/un1_rst_n_1_3_a2: 1 loads, 0 LSLICEs
+     Net u_spi/un1_rst_n_2_0_a2: 1 loads, 0 LSLICEs
+     Net u_bram/bram_rd_en_b_o: 16 loads, 16 LSLICEs
+     Net state[15]: 1 loads, 1 LSLICEs
+     Net N_70: 2 loads, 2 LSLICEs
+     Net eep_addr_l_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net state[14]: 1 loads, 1 LSLICEs
+     Net led_enable_1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net state_tr25_RNI9EC91: 1 loads, 1 LSLICEs
+     Net next_frame_sel_RNO[0]: 1 loads, 1 LSLICEs
+     Net N_67_i: 4 loads, 4 LSLICEs
+     Net wr_cnte: 6 loads, 6 LSLICEs
+     Net cfg_tx_we_0_sqmuxa_0: 4 loads, 4 LSLICEs
+     Net restart_req_1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net un1_cfg_rx_re_0_sqmuxa: 8 loads, 8 LSLICEs
+     Net pat_rowe: 3 loads, 3 LSLICEs
+     Net un2_pat_done_rise_1: 1 loads, 1 LSLICEs
+     Net un1_state_12_i: 12 loads, 12 LSLICEs
+     Net un1_pat_assemble_0_sqmuxa_3: 1 loads, 1 LSLICEs
+     Net eif_addr_vld_3: 9 loads, 9 LSLICEs
+     Net N_2044_i: 4 loads, 4 LSLICEs
+     Net cfg_rx_re_m: 1 loads, 1 LSLICEs
+     Net eif_erase_ctrl_0_sqmuxa: 2 loads, 2 LSLICEs
+     Net cfg_tx_wdata_21_0_o2_3_N_6_mux_i: 1 loads, 1 LSLICEs
+     Net eep_op_now_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net eep_disp_ready_1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net disp_gate_1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net cfg_tx_we_11_u_0_N_5_i: 9 loads, 9 LSLICEs
+     Net cfg_pipe_valid_16_N_5_mux_i: 8 loads, 8 LSLICEs
+   Number of local set/reset loads for net sys_rst_n_c merged into GSR:  810
+
+                                    Page 3
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+Design Summary (cont)
+---------------------
+   Number of LSRs:  8
+     Net sys_rst_n_c: 5 loads, 0 LSLICEs
+     Net un1_sys_rst_n_1: 2 loads, 2 LSLICEs
+     Net un1_slave_erase_clr_cnt[3]: 1 loads, 1 LSLICEs
+     Net u_spi/rw_is_write: 5 loads, 5 LSLICEs
+     Net u_spi/N_1817_i: 1 loads, 1 LSLICEs
+     Net u_spi/un1_cfg_rx_rdata14_2_0: 1 loads, 1 LSLICEs
+     Net cfg_rx_bank[1]: 1 loads, 1 LSLICEs
+     Net N_1831_i: 50 loads, 48 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net bram_rd_addr_b[0]: 128 loads
+     Net bram_rd_addr_b[1]: 128 loads
+     Net bram_rd_addr_b[2]: 128 loads
+     Net bram_rd_addr_b[3]: 128 loads
+     Net u_drv.led_col_ret_31_reset_reg_net: 80 loads
+     Net u_eep/u_core/spi_master_i/state[1]: 80 loads
+     Net bram_rd_addr_b[5]: 64 loads
+     Net u_drv/rptr_d_3_sqmuxa_o: 64 loads
+     Net N_1831_i: 50 loads
+     Net cfg_pipe_valid: 49 loads
+
+
+
+
+   Number of warnings:  5
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: Pref conflicts. Ignoring FREQUENCY NET "x2osc_clk" 66.500000 MHz
+     ;
+        Keeping FREQUENCY NET "x2osc_clk" 66.500000 MHz ;
+     .
+WARNING - map: Pref conflicts. Ignoring FREQUENCY NET "eif_clk_x2" 99.800000 MHz
+     ;
+        Keeping FREQUENCY NET "eif_clk_x2" 99.750000 MHz ;
+     .
+WARNING - map: Using local reset signal 'sys_rst_n_c' to infer global GSR net.
+WARNING - map: UFM was enabled in EFB: Enabling the configuration interface will
+     temporarily disable certain features of the device including Power
+     Controller, GSR, Hardened User SPI Port, Hardened Primary User I2C Port.
+     Functionality is restored after the Flash Memory (UFM/Configuration)
+     Interface is disabled using Disable Configuration Interface command 0x26
+     followed by Bypass command 0xFF. 
+WARNING - map: A new DEV_DENSITY property is auto created with value '6900L' by
+     software from the device 'LCMXO3LF-6900C' used.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
+
+                                    Page 4
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| eep_dq0             | BIDIR     | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| miso                | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| sys_rst_n           | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| prgrm_sda           | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| prgrm_scl           | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| gpio_LED[1]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| gpio_LED[0]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| row_o[31]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[30]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[29]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[28]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[27]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[26]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[25]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[24]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[23]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[22]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[21]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[20]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[19]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[18]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[17]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[16]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[15]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[14]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[13]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[12]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[11]           | OUTPUT    | LVCMOS25  | OUT        |
+
+                                    Page 5
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| row_o[10]           | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[9]            | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[8]            | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[7]            | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[6]            | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[5]            | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[4]            | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[3]            | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[2]            | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[1]            | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| row_o[0]            | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| cloumn_o[31]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[30]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[29]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[28]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[27]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[26]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[25]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[24]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[23]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[22]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[21]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[20]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[19]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[18]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[17]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[16]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[15]        | OUTPUT    | LVCMOS25  |            |
+
+                                    Page 6
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| cloumn_o[14]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[13]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[12]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[11]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[10]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[9]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[8]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[7]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[6]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[5]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[4]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[3]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[2]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[1]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cloumn_o[0]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| HW_Frequency_i[3]   | INPUT     | LVCMOS25  | IN         |
++---------------------+-----------+-----------+------------+
+| HW_Frequency_i[2]   | INPUT     | LVCMOS25  | IN         |
++---------------------+-----------+-----------+------------+
+| HW_Frequency_i[1]   | INPUT     | LVCMOS25  | IN         |
++---------------------+-----------+-----------+------------+
+| HW_Frequency_i[0]   | INPUT     | LVCMOS25  | IN         |
++---------------------+-----------+-----------+------------+
+| HW_L2_i[2]          | INPUT     | LVCMOS25  | IN         |
++---------------------+-----------+-----------+------------+
+| HW_L2_i[1]          | INPUT     | LVCMOS25  | IN         |
++---------------------+-----------+-----------+------------+
+| HW_L2_i[0]          | INPUT     | LVCMOS25  | IN         |
++---------------------+-----------+-----------+------------+
+| HW_L1_i[3]          | INPUT     | LVCMOS25  | IN         |
++---------------------+-----------+-----------+------------+
+| HW_L1_i[2]          | INPUT     | LVCMOS25  | IN         |
++---------------------+-----------+-----------+------------+
+| HW_L1_i[1]          | INPUT     | LVCMOS25  | IN         |
++---------------------+-----------+-----------+------------+
+| HW_L1_i[0]          | INPUT     | LVCMOS25  | IN         |
++---------------------+-----------+-----------+------------+
+| eep_dq3             | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| eep_dq2             | BIDIR     | LVCMOS25  |            |
+
+                                    Page 7
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| eep_dq1             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| eep_cs_n            | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| eep_sclk            | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| mosi                | INPUT     | LVCMOS25  | IN         |
++---------------------+-----------+-----------+------------+
+| cs_n                | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| sclk                | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block pll_u0/VCC undriven or does not drive anything - clipped.
+Block pll_u1/VCC undriven or does not drive anything - clipped.
+Block u_bram/VCC undriven or does not drive anything - clipped.
+Block u_bram/GND undriven or does not drive anything - clipped.
+Block u_stream/VCC undriven or does not drive anything - clipped.
+Block u_eep/VCC undriven or does not drive anything - clipped.
+Block u_eep/GND undriven or does not drive anything - clipped.
+Block u_eep/u_tx_fifo/VCC undriven or does not drive anything - clipped.
+Block u_eep/u_tx_fifo/GND undriven or does not drive anything - clipped.
+Block u_eep/u_rx_fifo/VCC undriven or does not drive anything - clipped.
+Block u_eep/u_rx_fifo/GND undriven or does not drive anything - clipped.
+Block u_eep/u_core/spi_master_i/VCC undriven or does not drive anything -
+     clipped.
+Signal sys_rst_n_c_i was merged into signal sys_rst_n_c
+Signal cfg_pipe_valid_i was merged into signal cfg_pipe_valid
+Signal sclk_c_i was merged into signal sclk_c
+Signal u_stream/state_i[1] was merged into signal u_stream/state[1]
+Signal u_drv/un1_refresh_pulse_d_2_sqmuxa_o_i was merged into signal
+     u_drv/un1_refresh_pulse_d_2_sqmuxa_o
+Signal GND undriven or does not drive anything - clipped.
+Signal pll_u0/GND undriven or does not drive anything - clipped.
+Signal pll_u1/GND undriven or does not drive anything - clipped.
+Signal u_spi/GND undriven or does not drive anything - clipped.
+Signal u_stream/GND undriven or does not drive anything - clipped.
+Signal u_drv/GND undriven or does not drive anything - clipped.
+Signal u_eep/u_tx_fifo/u_fifo/VCC undriven or does not drive anything - clipped.
+     
+Signal u_eep/u_tx_fifo/u_fifo/GND undriven or does not drive anything - clipped.
+     
+Signal u_eep/u_rx_fifo/u_fifo/VCC undriven or does not drive anything - clipped.
+     
+Signal u_eep/u_rx_fifo/u_fifo/GND undriven or does not drive anything - clipped.
+     
+Signal u_eep/u_core/GND undriven or does not drive anything - clipped.
+Signal u_eep/u_core/spi_master_i/GND undriven or does not drive anything -
+     clipped.
+Signal efb_i2c_prgrm_u0/VCC undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/GND undriven or does not drive anything - clipped.
+Signal wr_cnt_s_0_S1[9] undriven or does not drive anything - clipped.
+
+                                    Page 8
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+Removed logic (cont)
+--------------------
+Signal wr_cnt_s_0_COUT[9] undriven or does not drive anything - clipped.
+Signal pat_row_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal N_2 undriven or does not drive anything - clipped.
+Signal pat_row_cry_0_COUT[3] undriven or does not drive anything - clipped.
+Signal un3_tick_cnt_cry_0_0_S1 undriven or does not drive anything - clipped.
+Signal un3_tick_cnt_cry_0_0_S0 undriven or does not drive anything - clipped.
+Signal N_20 undriven or does not drive anything - clipped.
+Signal un3_tick_cnt_cry_23_0_COUT undriven or does not drive anything - clipped.
+     
+Signal un19_pat_src_index_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal un19_pat_src_index_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal N_21 undriven or does not drive anything - clipped.
+Signal un19_pat_src_index_s_13_0_S1 undriven or does not drive anything -
+     clipped.
+Signal un19_pat_src_index_s_13_0_COUT undriven or does not drive anything -
+     clipped.
+Signal un14_pat_src_index_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal un14_pat_src_index_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal N_22 undriven or does not drive anything - clipped.
+Signal un14_pat_src_index_s_15_0_S1 undriven or does not drive anything -
+     clipped.
+Signal un14_pat_src_index_s_15_0_COUT undriven or does not drive anything -
+     clipped.
+Signal un1_pat_src_index_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal un1_pat_src_index_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal N_23 undriven or does not drive anything - clipped.
+Signal un1_pat_src_index_s_7_0_S1 undriven or does not drive anything - clipped.
+     
+Signal un1_pat_src_index_s_7_0_COUT undriven or does not drive anything -
+     clipped.
+Signal un1_slave_erase_clr_cnt_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal un1_slave_erase_clr_cnt_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal N_24 undriven or does not drive anything - clipped.
+Signal un1_slave_erase_clr_cnt_s_3_0_S1 undriven or does not drive anything -
+     clipped.
+Signal un1_slave_erase_clr_cnt_s_3_0_COUT undriven or does not drive anything -
+     clipped.
+Signal un1_wr_cnt_cry_0_0_S1 undriven or does not drive anything - clipped.
+Signal un1_wr_cnt_cry_0_0_S0 undriven or does not drive anything - clipped.
+Signal N_25 undriven or does not drive anything - clipped.
+Signal un1_wr_cnt_cry_1_0_S1 undriven or does not drive anything - clipped.
+Signal un1_wr_cnt_cry_1_0_S0 undriven or does not drive anything - clipped.
+Signal un1_wr_cnt_cry_3_0_S1 undriven or does not drive anything - clipped.
+Signal un1_wr_cnt_cry_3_0_S0 undriven or does not drive anything - clipped.
+Signal un1_wr_cnt_cry_5_0_S1 undriven or does not drive anything - clipped.
+Signal un1_wr_cnt_cry_5_0_S0 undriven or does not drive anything - clipped.
+Signal un1_wr_cnt_cry_7_0_S1 undriven or does not drive anything - clipped.
+Signal un1_wr_cnt_cry_7_0_S0 undriven or does not drive anything - clipped.
+
+                                    Page 9
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+Removed logic (cont)
+--------------------
+Signal un1_wr_cnt_cry_9_0_S0 undriven or does not drive anything - clipped.
+Signal un1_wr_cnt_cry_9_0_COUT undriven or does not drive anything - clipped.
+Signal un1_hw_l1_sync_0_I_1_0_S1 undriven or does not drive anything - clipped.
+Signal un1_hw_l1_sync_0_I_1_0_S0 undriven or does not drive anything - clipped.
+Signal N_26 undriven or does not drive anything - clipped.
+Signal un1_hw_l1_sync_0_I_9_0_S1 undriven or does not drive anything - clipped.
+Signal un1_hw_l1_sync_0_I_9_0_S0 undriven or does not drive anything - clipped.
+Signal un1_hw_l1_sync_0_I_21_0_S0 undriven or does not drive anything - clipped.
+     
+Signal un1_hw_l1_sync_0_I_21_0_COUT undriven or does not drive anything -
+     clipped.
+Signal pll_u0/CLKINTFB undriven or does not drive anything - clipped.
+Signal pll_u0/DPHSRC undriven or does not drive anything - clipped.
+Signal pll_u0/PLLACK undriven or does not drive anything - clipped.
+Signal pll_u0/PLLDATO0_0 undriven or does not drive anything - clipped.
+Signal pll_u0/PLLDATO1_0 undriven or does not drive anything - clipped.
+Signal pll_u0/PLLDATO2_0 undriven or does not drive anything - clipped.
+Signal pll_u0/PLLDATO3_0 undriven or does not drive anything - clipped.
+Signal pll_u0/PLLDATO4_0 undriven or does not drive anything - clipped.
+Signal pll_u0/PLLDATO5_0 undriven or does not drive anything - clipped.
+Signal pll_u0/PLLDATO6_0 undriven or does not drive anything - clipped.
+Signal pll_u0/PLLDATO7_0 undriven or does not drive anything - clipped.
+Signal pll_u0/REFCLK undriven or does not drive anything - clipped.
+Signal pll_u0/INTLOCK undriven or does not drive anything - clipped.
+Signal pll_u0/LOCK undriven or does not drive anything - clipped.
+Signal pll_u0/CLKOS3 undriven or does not drive anything - clipped.
+Signal pll_u0/CLKOS2 undriven or does not drive anything - clipped.
+Signal pll_u0/CLKOS undriven or does not drive anything - clipped.
+Signal pll_u1/CLKINTFB_0 undriven or does not drive anything - clipped.
+Signal pll_u1/DPHSRC_0 undriven or does not drive anything - clipped.
+Signal pll_u1/PLLACK_0 undriven or does not drive anything - clipped.
+Signal pll_u1/PLLDATO0_1 undriven or does not drive anything - clipped.
+Signal pll_u1/PLLDATO1_1 undriven or does not drive anything - clipped.
+Signal pll_u1/PLLDATO2_1 undriven or does not drive anything - clipped.
+Signal pll_u1/PLLDATO3_1 undriven or does not drive anything - clipped.
+Signal pll_u1/PLLDATO4_1 undriven or does not drive anything - clipped.
+Signal pll_u1/PLLDATO5_1 undriven or does not drive anything - clipped.
+Signal pll_u1/PLLDATO6_1 undriven or does not drive anything - clipped.
+Signal pll_u1/PLLDATO7_1 undriven or does not drive anything - clipped.
+Signal pll_u1/REFCLK_0 undriven or does not drive anything - clipped.
+Signal pll_u1/INTLOCK_0 undriven or does not drive anything - clipped.
+Signal pll_u1/LOCK undriven or does not drive anything - clipped.
+Signal pll_u1/CLKOS3_0 undriven or does not drive anything - clipped.
+Signal pll_u1/CLKOS2_0 undriven or does not drive anything - clipped.
+Signal pll_u1/CLKOS_0 undriven or does not drive anything - clipped.
+Signal u_spi/mem_rx_pat_0_0_DO17 undriven or does not drive anything - clipped.
+Signal u_spi/mem_rx_pat_0_0_DO8 undriven or does not drive anything - clipped.
+Signal u_spi/mem_rx_pat_0_0_DO7 undriven or does not drive anything - clipped.
+Signal u_spi/mem_rx_pat_0_0_DO6 undriven or does not drive anything - clipped.
+Signal u_spi/mem_rx_pat_0_0_DO5 undriven or does not drive anything - clipped.
+Signal u_spi/mem_rx_pat_0_0_DO4 undriven or does not drive anything - clipped.
+Signal u_spi/mem_rx_pat_0_0_DO3 undriven or does not drive anything - clipped.
+Signal u_spi/mem_rx_pat_0_0_DO2 undriven or does not drive anything - clipped.
+Signal u_spi/mem_rx_pat_0_0_DO1 undriven or does not drive anything - clipped.
+Signal u_spi/mem_rx_pat_0_0_DO0 undriven or does not drive anything - clipped.
+Signal u_spi/mem_tx_sys_mem_tx_sys_0_0_DO17 undriven or does not drive anything
+
+                                   Page 10
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+Removed logic (cont)
+--------------------
+     - clipped.
+Signal u_spi/mem_tx_sys_mem_tx_sys_0_0_DO8 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_sys_mem_tx_sys_0_0_DO7 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_sys_mem_tx_sys_0_0_DO6 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_sys_mem_tx_sys_0_0_DO5 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_sys_mem_tx_sys_0_0_DO4 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_sys_mem_tx_sys_0_0_DO3 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_sys_mem_tx_sys_0_0_DO2 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_sys_mem_tx_sys_0_0_DO1 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_sys_mem_tx_sys_0_0_DO0 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_pat_mem_tx_pat_0_0_DO17 undriven or does not drive anything
+     - clipped.
+Signal u_spi/mem_tx_pat_mem_tx_pat_0_0_DO8 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_pat_mem_tx_pat_0_0_DO7 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_pat_mem_tx_pat_0_0_DO6 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_pat_mem_tx_pat_0_0_DO5 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_pat_mem_tx_pat_0_0_DO4 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_pat_mem_tx_pat_0_0_DO3 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_pat_mem_tx_pat_0_0_DO2 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_pat_mem_tx_pat_0_0_DO1 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_pat_mem_tx_pat_0_0_DO0 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_eep_mem_tx_eep_0_0_DO17 undriven or does not drive anything
+     - clipped.
+Signal u_spi/mem_tx_eep_mem_tx_eep_0_0_DO8 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_eep_mem_tx_eep_0_0_DO7 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_eep_mem_tx_eep_0_0_DO6 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_eep_mem_tx_eep_0_0_DO5 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_eep_mem_tx_eep_0_0_DO4 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_eep_mem_tx_eep_0_0_DO3 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_eep_mem_tx_eep_0_0_DO2 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_tx_eep_mem_tx_eep_0_0_DO1 undriven or does not drive anything -
+
+                                   Page 11
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal u_spi/mem_tx_eep_mem_tx_eep_0_0_DO0 undriven or does not drive anything -
+     clipped.
+Signal u_spi/tx_byte_cnt_cry_0_S0[0] undriven or does not drive anything -
+     clipped.
+Signal u_spi/N_1 undriven or does not drive anything - clipped.
+Signal u_spi/tx_byte_cnt_s_0_S1[7] undriven or does not drive anything -
+     clipped.
+Signal u_spi/tx_byte_cnt_s_0_COUT[7] undriven or does not drive anything -
+     clipped.
+Signal u_spi/rx_byte_cnt_cry_0_S0[0] undriven or does not drive anything -
+     clipped.
+Signal u_spi/N_2 undriven or does not drive anything - clipped.
+Signal u_spi/rx_byte_cnt_s_0_S1[7] undriven or does not drive anything -
+     clipped.
+Signal u_spi/rx_byte_cnt_s_0_COUT[7] undriven or does not drive anything -
+     clipped.
+Signal u_spi/un12_pat_cnt_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal u_spi/un12_pat_cnt_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal u_spi/N_3 undriven or does not drive anything - clipped.
+Signal u_spi/un12_pat_cnt_s_7_0_S1 undriven or does not drive anything -
+     clipped.
+Signal u_spi/un12_pat_cnt_s_7_0_COUT undriven or does not drive anything -
+     clipped.
+Signal u_spi/un3_mem_rx_sys_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal u_spi/un3_mem_rx_sys_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal u_spi/N_4 undriven or does not drive anything - clipped.
+Signal u_spi/un3_mem_rx_sys_cry_7_0_COUT undriven or does not drive anything -
+     clipped.
+Signal u_spi/un4_tx_next_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal u_spi/un4_tx_next_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal u_spi/N_5 undriven or does not drive anything - clipped.
+Signal u_spi/un4_tx_next_s_7_0_S1 undriven or does not drive anything - clipped.
+     
+Signal u_spi/un4_tx_next_s_7_0_COUT undriven or does not drive anything -
+     clipped.
+Signal u_spi/un4_rx_bit_cnt_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal u_spi/un4_rx_bit_cnt_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal u_spi/N_6 undriven or does not drive anything - clipped.
+Signal u_spi/un4_rx_bit_cnt_s_7_0_S1 undriven or does not drive anything -
+     clipped.
+Signal u_spi/un4_rx_bit_cnt_s_7_0_COUT undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_rx_pat_1_0_0_DO17 undriven or does not drive anything -
+     clipped.
+Signal u_spi/mem_rx_pat_1_0_0_DO8 undriven or does not drive anything - clipped.
+     
+Signal u_spi/mem_rx_pat_1_0_0_DO7 undriven or does not drive anything - clipped.
+
+                                   Page 12
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+Removed logic (cont)
+--------------------
+     
+Signal u_spi/mem_rx_pat_1_0_0_DO6 undriven or does not drive anything - clipped.
+     
+Signal u_spi/mem_rx_pat_1_0_0_DO5 undriven or does not drive anything - clipped.
+     
+Signal u_spi/mem_rx_pat_1_0_0_DO4 undriven or does not drive anything - clipped.
+     
+Signal u_spi/mem_rx_pat_1_0_0_DO3 undriven or does not drive anything - clipped.
+     
+Signal u_spi/mem_rx_pat_1_0_0_DO2 undriven or does not drive anything - clipped.
+     
+Signal u_spi/mem_rx_pat_1_0_0_DO1 undriven or does not drive anything - clipped.
+     
+Signal u_spi/mem_rx_pat_1_0_0_DO0 undriven or does not drive anything - clipped.
+     
+Signal u_stream/output_cnt_cry_0_S0[0] undriven or does not drive anything -
+     clipped.
+Signal u_stream/N_1 undriven or does not drive anything - clipped.
+Signal u_stream/output_cnt_s_0_S1[5] undriven or does not drive anything -
+     clipped.
+Signal u_stream/output_cnt_s_0_COUT[5] undriven or does not drive anything -
+     clipped.
+Signal u_stream/issue_row_cry_0_S0[0] undriven or does not drive anything -
+     clipped.
+Signal u_stream/N_2 undriven or does not drive anything - clipped.
+Signal u_stream/issue_row_cry_0_COUT[3] undriven or does not drive anything -
+     clipped.
+Signal u_stream/issued_cnt_cry_0_S0[0] undriven or does not drive anything -
+     clipped.
+Signal u_stream/N_3 undriven or does not drive anything - clipped.
+Signal u_stream/issued_cnt_s_0_S1[5] undriven or does not drive anything -
+     clipped.
+Signal u_stream/issued_cnt_s_0_COUT[5] undriven or does not drive anything -
+     clipped.
+Signal u_drv/fb_fb_0_1_DO8 undriven or does not drive anything - clipped.
+Signal u_drv/fb_fb_0_1_DO7 undriven or does not drive anything - clipped.
+Signal u_drv/fb_fb_0_1_DO6 undriven or does not drive anything - clipped.
+Signal u_drv/fb_fb_0_1_DO5 undriven or does not drive anything - clipped.
+Signal u_drv/div_q_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal u_drv/N_1 undriven or does not drive anything - clipped.
+Signal u_drv/div_q_s_0_S1[15] undriven or does not drive anything - clipped.
+Signal u_drv/div_q_s_0_COUT[15] undriven or does not drive anything - clipped.
+Signal u_drv/hold_q_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal u_drv/N_2 undriven or does not drive anything - clipped.
+Signal u_drv/hold_q_s_0_S1[11] undriven or does not drive anything - clipped.
+Signal u_drv/hold_q_s_0_COUT[11] undriven or does not drive anything - clipped.
+Signal u_eep/u_tx_fifo/u_fifo/AlmostFull undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_tx_fifo/u_fifo/AlmostEmpty undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_tx_fifo/u_fifo/DO17 undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_tx_fifo/u_fifo/DO8 undriven or does not drive anything - clipped.
+     
+Signal u_eep/u_tx_fifo/u_fifo/DO7 undriven or does not drive anything - clipped.
+     
+
+                                   Page 13
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+Removed logic (cont)
+--------------------
+Signal u_eep/u_tx_fifo/u_fifo/DO6 undriven or does not drive anything - clipped.
+     
+Signal u_eep/u_tx_fifo/u_fifo/DO5 undriven or does not drive anything - clipped.
+     
+Signal u_eep/u_tx_fifo/u_fifo/DO4 undriven or does not drive anything - clipped.
+     
+Signal u_eep/u_tx_fifo/u_fifo/DO3 undriven or does not drive anything - clipped.
+     
+Signal u_eep/u_tx_fifo/u_fifo/DO2 undriven or does not drive anything - clipped.
+     
+Signal u_eep/u_tx_fifo/u_fifo/DO1 undriven or does not drive anything - clipped.
+     
+Signal u_eep/u_tx_fifo/u_fifo/DO0 undriven or does not drive anything - clipped.
+     
+Signal u_eep/u_rx_fifo/u_fifo/AlmostFull undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_rx_fifo/u_fifo/AlmostEmpty undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_rx_fifo/u_fifo/DO17_0 undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_rx_fifo/u_fifo/DO8_0 undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_rx_fifo/u_fifo/DO7_0 undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_rx_fifo/u_fifo/DO6_0 undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_rx_fifo/u_fifo/DO5_0 undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_rx_fifo/u_fifo/DO4_0 undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_rx_fifo/u_fifo/DO3_0 undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_rx_fifo/u_fifo/DO2_0 undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_rx_fifo/u_fifo/DO1_0 undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_rx_fifo/u_fifo/DO0_0 undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_core/data_cntr_int_cry_0_S0[0] undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/N_8 undriven or does not drive anything - clipped.
+Signal u_eep/u_core/data_cntr_int_s_0_S1[9] undriven or does not drive anything
+     - clipped.
+Signal u_eep/u_core/data_cntr_int_s_0_COUT[9] undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/un1_data_cntr_int_cry_7_0_S1 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/un1_data_cntr_int_cry_7_0_S0 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/N_9 undriven or does not drive anything - clipped.
+Signal u_eep/u_core/un1_data_cntr_int_cry_8_0_S1 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/un1_data_cntr_int_cry_8_0_S0 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/un1_data_cntr_int_cry_9_0_S1 undriven or does not drive
+     anything - clipped.
+
+                                   Page 14
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+Removed logic (cont)
+--------------------
+Signal u_eep/u_core/un1_data_cntr_int_cry_9_0_COUT undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_lt_len_m1_0_cry_0_0_S1 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_lt_len_m1_0_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/N_10 undriven or does not drive anything - clipped.
+Signal u_eep/u_core/data_cntr_lt_len_m1_0_cry_1_0_S1 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_lt_len_m1_0_cry_1_0_S0 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_lt_len_m1_0_cry_3_0_S1 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_lt_len_m1_0_cry_3_0_S0 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_lt_len_m1_0_cry_5_0_S1 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_lt_len_m1_0_cry_5_0_S0 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_lt_len_m1_0_cry_7_0_S1 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_lt_len_m1_0_cry_7_0_S0 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_lt_len_m1_0_cry_9_0_S1 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_lt_len_m1_0_cry_9_0_S0 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_lt_len_m1_0_cry_10_0_S1 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_lt_len_m1_0_cry_10_0_COUT undriven or does not
+     drive anything - clipped.
+Signal u_eep/u_core/data_cntr_eq_len_2_0_I_1_0_S1 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_eq_len_2_0_I_1_0_S0 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/N_11 undriven or does not drive anything - clipped.
+Signal u_eep/u_core/data_cntr_eq_len_2_0_I_9_0_S1 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_eq_len_2_0_I_9_0_S0 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_eq_len_2_0_I_21_0_S1 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_eq_len_2_0_I_21_0_S0 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_eq_len_2_0_I_27_0_S1 undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/data_cntr_eq_len_2_0_I_27_0_COUT undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/spi_master_i/half_edges_rem_cry_0_S0[0] undriven or does not
+     drive anything - clipped.
+Signal u_eep/u_core/spi_master_i/N_3 undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_core/spi_master_i/half_edges_rem_cry_0_COUT[15] undriven or does
+     not drive anything - clipped.
+Signal u_eep/u_core/spi_master_i/shifts_left_cry_0_S0[0] undriven or does not
+     drive anything - clipped.
+
+                                   Page 15
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+Removed logic (cont)
+--------------------
+Signal u_eep/u_core/spi_master_i/N_4 undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_core/spi_master_i/shifts_left_s_0_S1[15] undriven or does not
+     drive anything - clipped.
+Signal u_eep/u_core/spi_master_i/shifts_left_s_0_COUT[15] undriven or does not
+     drive anything - clipped.
+Signal u_eep/u_core/spi_master_i/idx_tx_cry_0_S0[0] undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/spi_master_i/N_5 undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_core/spi_master_i/idx_tx_s_0_S1[15] undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/spi_master_i/idx_tx_s_0_COUT[15] undriven or does not drive
+     anything - clipped.
+Signal u_eep/u_core/spi_master_i/un1_samples_left_18_cry_0_0_S1 undriven or does
+     not drive anything - clipped.
+Signal u_eep/u_core/spi_master_i/un1_samples_left_18_cry_0_0_S0 undriven or does
+     not drive anything - clipped.
+Signal u_eep/u_core/spi_master_i/N_6 undriven or does not drive anything -
+     clipped.
+Signal u_eep/u_core/spi_master_i/un1_samples_left_18_s_15_0_S1 undriven or does
+     not drive anything - clipped.
+Signal u_eep/u_core/spi_master_i/un1_samples_left_18_s_15_0_COUT undriven or
+     does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/CFGSTDBY undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/CFGWAKE undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/wbc_ufm_irq undriven or does not drive anything -
+     clipped.
+Signal efb_i2c_prgrm_u0/TCOC undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/TCINT undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/SPIIRQO undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/SPICSNEN undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/SPIMCSN7 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/SPIMCSN6 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/SPIMCSN5 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/SPIMCSN4 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/SPIMCSN3 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/SPIMCSN2 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/SPIMCSN1 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/SPIMCSN0 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/SPIMOSIEN undriven or does not drive anything - clipped.
+     
+Signal efb_i2c_prgrm_u0/SPIMOSIO undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/SPIMISOEN undriven or does not drive anything - clipped.
+     
+Signal efb_i2c_prgrm_u0/SPIMISOO undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/SPISCKEN undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/SPISCKO undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/I2C2IRQO undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/i2c1_irqo undriven or does not drive anything - clipped.
+     
+Signal efb_i2c_prgrm_u0/I2C2SDAOEN undriven or does not drive anything -
+     clipped.
+Signal efb_i2c_prgrm_u0/I2C2SDAO undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/I2C2SCLOEN undriven or does not drive anything -
+     clipped.
+
+                                   Page 16
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+Removed logic (cont)
+--------------------
+Signal efb_i2c_prgrm_u0/I2C2SCLO undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/PLLDATO0 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/PLLDATO1 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/PLLDATO2 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/PLLDATO3 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/PLLDATO4 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/PLLDATO5 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/PLLDATO6 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/PLLDATO7 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/PLLADRO0 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/PLLADRO1 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/PLLADRO2 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/PLLADRO3 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/PLLADRO4 undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/PLLWEO undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/PLL1STBO undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/PLL0STBO undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/PLLRSTO undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/PLLCLKO undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/wb_ack_o undriven or does not drive anything - clipped.
+Signal efb_i2c_prgrm_u0/wb_dat_o_1[0] undriven or does not drive anything -
+     clipped.
+Signal efb_i2c_prgrm_u0/wb_dat_o_1[1] undriven or does not drive anything -
+     clipped.
+Signal efb_i2c_prgrm_u0/wb_dat_o_1[2] undriven or does not drive anything -
+     clipped.
+Signal efb_i2c_prgrm_u0/wb_dat_o_1[3] undriven or does not drive anything -
+     clipped.
+Signal efb_i2c_prgrm_u0/wb_dat_o_1[4] undriven or does not drive anything -
+     clipped.
+Signal efb_i2c_prgrm_u0/wb_dat_o_1[5] undriven or does not drive anything -
+     clipped.
+Signal efb_i2c_prgrm_u0/wb_dat_o_1[6] undriven or does not drive anything -
+     clipped.
+Signal efb_i2c_prgrm_u0/wb_dat_o_1[7] undriven or does not drive anything -
+     clipped.
+Signal wr_cnt_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal N_1 undriven or does not drive anything - clipped.
+Signal SEDSTDBY undriven or does not drive anything - clipped.
+Block sys_rst_n_pad_RNIOLH1 was optimized away.
+Block cfg_pipe_valid_RNICSGE was optimized away.
+Block sclk_pad_RNI1N07 was optimized away.
+Block u_stream/bram_rd_en_RNO_0 was optimized away.
+Block u_drv/led_col_ret_63_RNII435 was optimized away.
+Block GND was optimized away.
+Block pll_u0/GND was optimized away.
+Block pll_u1/GND was optimized away.
+Block u_spi/GND was optimized away.
+Block u_stream/GND was optimized away.
+Block u_drv/GND was optimized away.
+Block u_eep/u_tx_fifo/u_fifo/VCC was optimized away.
+Block u_eep/u_tx_fifo/u_fifo/GND was optimized away.
+Block u_eep/u_rx_fifo/u_fifo/VCC was optimized away.
+Block u_eep/u_rx_fifo/u_fifo/GND was optimized away.
+Block u_eep/u_core/GND was optimized away.
+Block u_eep/u_core/spi_master_i/GND was optimized away.
+
+                                   Page 17
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+Removed logic (cont)
+--------------------
+Block efb_i2c_prgrm_u0/VCC was optimized away.
+Block efb_i2c_prgrm_u0/GND was optimized away.
+
+Memory Usage
+------------
+
+/u_bram/mem_ram:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_0:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_1:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_10:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_103:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_108:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_11:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_113:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_118:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_12:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+
+                                   Page 18
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+Memory Usage (cont)
+-------------------
+/u_bram/mem_ram_123:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_128:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_13:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_14:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_15:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_16:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_17:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_18:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_19:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_2:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_20:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_21:
+
+                                   Page 19
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+Memory Usage (cont)
+-------------------
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_22:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_23:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_24:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_3:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_4:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_5:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_6:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_7:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_8:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_bram/mem_ram_9:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_drv:
+    EBRs: 2
+
+                                   Page 20
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+Memory Usage (cont)
+-------------------
+    RAM SLICEs: 0
+    Logic SLICEs: 111
+    PFU Registers: 202
+    -Contains EBR fb_fb_0_1:  TYPE= PDPW8KC,  Width= 14,  Depth_R= 32,  Depth_W=
+         32,  REGMODE= NOREG,  RESETMODE= SYNC,  GSR= DISABLED
+    -Contains EBR fb_fb_0_0:  TYPE= PDPW8KC,  Width= 18,  Depth_R= 32,  Depth_W=
+         32,  REGMODE= NOREG,  RESETMODE= SYNC,  GSR= DISABLED
+/u_eep/u_rx_fifo/u_fifo:
+    EBRs: 1
+    RAM SLICEs: 0
+    Logic SLICEs: 0
+    PFU Registers: 0
+    -Contains EBR fifo_0_0:  TYPE= FIFO8KB,  Width= 8,  REGMODE= NOREG,
+         RESETMODE= ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR= DISABLED
+/u_eep/u_tx_fifo/u_fifo:
+    EBRs: 1
+    RAM SLICEs: 0
+    Logic SLICEs: 0
+    PFU Registers: 0
+    -Contains EBR fifo_0_0:  TYPE= FIFO8KB,  Width= 8,  REGMODE= NOREG,
+         RESETMODE= ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR= DISABLED
+/u_spi:
+    EBRs: 5
+    RAM SLICEs: 0
+    Logic SLICEs: 162
+    PFU Registers: 184
+    -Contains EBR POSRX_NEGTX.mem_rx_pat_1_POSRX_NEGTX.mem_rx_pat_1_0_0:  TYPE=
+         PDPW8KC,  Width= 8,  Depth_R= 256,  Depth_W= 256,  REGMODE= NOREG,
+         RESETMODE= SYNC,  GSR= DISABLED
+    -Contains EBR mem_tx_eep_mem_tx_eep_0_0:  TYPE= PDPW8KC,  Width= 8,
+         Depth_R= 256,  Depth_W= 256,  REGMODE= NOREG,  RESETMODE= SYNC,  GSR=
+         DISABLED
+    -Contains EBR mem_tx_pat_mem_tx_pat_0_0:  TYPE= PDPW8KC,  Width= 8,
+         Depth_R= 256,  Depth_W= 256,  REGMODE= NOREG,  RESETMODE= SYNC,  GSR=
+         DISABLED
+    -Contains EBR mem_tx_sys_mem_tx_sys_0_0:  TYPE= PDPW8KC,  Width= 8,
+         Depth_R= 256,  Depth_W= 256,  REGMODE= NOREG,  RESETMODE= SYNC,  GSR=
+         DISABLED
+    -Contains EBR POSRX_NEGTX.mem_rx_pat_POSRX_NEGTX.mem_rx_pat_0_0:  TYPE=
+         PDPW8KC,  Width= 8,  Depth_R= 256,  Depth_W= 256,  REGMODE= NOREG,
+         RESETMODE= SYNC,  GSR= DISABLED
+
+     
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                pll_u1/PLLInst_0
+  PLL Type:                                         EHXPLLJ
+  Input Clock:                             NODE     Osc_Clk
+  Output Clock(P):                         NODE     eif_clk_x2
+  Output Clock(S):                                  NONE
+  Output Clock(S2):                                 NONE
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     eif_clk_x2
+
+                                   Page 21
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+PLL/DLL Summary (cont)
+----------------------
+  Reset Signal:                                     NONE
+  M Divider Reset Signal:                           NONE
+  C Divider Reset Signal:                           NONE
+  D Divider Reset Signal:                           NONE
+  Standby Signal:                                   NONE
+  PLL LOCK signal:                                  NONE
+  PLL Data bus CLK Signal:                          NONE
+  PLL Data bus Strobe Signal:                       NONE
+  PLL Data bus Reset Signal:                        NONE
+  PLL Data bus Write Enable Signal:                 NONE
+  PLL Data bus Address0:                            NONE
+  PLL Data bus Address1:                            NONE
+  PLL Data bus Address2:                            NONE
+  PLL Data bus Address3:                            NONE
+  PLL Data bus Address4:                            NONE
+  PLL Data In bus Data0:                            NONE
+  PLL Data In bus Data1:                            NONE
+  PLL Data In bus Data2:                            NONE
+  PLL Data In bus Data3:                            NONE
+  PLL Data In bus Data4:                            NONE
+  PLL Data In bus Data5:                            NONE
+  PLL Data In bus Data6:                            NONE
+  PLL Data In bus Data7:                            NONE
+  PLL Data bus Acknowledge:                         NONE
+  PLL Data Out bus Data0:                           NONE
+  PLL Data Out bus Data1:                           NONE
+  PLL Data Out bus Data2:                           NONE
+  PLL Data Out bus Data3:                           NONE
+  PLL Data Out bus Data4:                           NONE
+  PLL Data Out bus Data5:                           NONE
+  PLL Data Out bus Data6:                           NONE
+  PLL Data Out bus Data7:                           NONE
+  Input Clock Frequency (MHz):                      133.0000
+  Output Clock(P) Frequency (MHz):                  99.7500
+  Output Clock(S) Frequency (MHz):                  NA
+  Output Clock(S2) Frequency (MHz):                 NA
+  Output Clock(S3) Frequency (MHz):                 NA
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              VCO_PHASE
+  Pre Divider B Input:                              VCO_PHASE
+  Pre Divider C Input:                              VCO_PHASE
+  Pre Divider D Input:                              VCO_PHASE
+  VCO Bypass A Input:                               VCO_PHASE
+  VCO Bypass B Input:                               VCO_PHASE
+  VCO Bypass C Input:                               VCO_PHASE
+  VCO Bypass D Input:                               VCO_PHASE
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     4
+  CLKFB Divider:                                    3
+  CLKOP Divider:                                    5
+  CLKOS Divider:                                    1
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+
+                                   Page 22
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+PLL/DLL Summary (cont)
+----------------------
+  Fractional N Divider:                             0
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 RISING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 FALLING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS3 Desired Phase Shift(degree):               0
+PLL 2:                                     Pin/Node Value
+  PLL Instance Name:                                pll_u0/PLLInst_0
+  PLL Type:                                         EHXPLLJ
+  Input Clock:                             NODE     Osc_Clk
+  Output Clock(P):                         NODE     x2osc_clk
+  Output Clock(S):                                  NONE
+  Output Clock(S2):                                 NONE
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     x2osc_clk
+  Reset Signal:                                     NONE
+  M Divider Reset Signal:                           NONE
+  C Divider Reset Signal:                           NONE
+  D Divider Reset Signal:                           NONE
+  Standby Signal:                                   NONE
+  PLL LOCK signal:                                  NONE
+  PLL Data bus CLK Signal:                          NONE
+  PLL Data bus Strobe Signal:                       NONE
+  PLL Data bus Reset Signal:                        NONE
+  PLL Data bus Write Enable Signal:                 NONE
+  PLL Data bus Address0:                            NONE
+  PLL Data bus Address1:                            NONE
+  PLL Data bus Address2:                            NONE
+  PLL Data bus Address3:                            NONE
+  PLL Data bus Address4:                            NONE
+  PLL Data In bus Data0:                            NONE
+  PLL Data In bus Data1:                            NONE
+  PLL Data In bus Data2:                            NONE
+  PLL Data In bus Data3:                            NONE
+  PLL Data In bus Data4:                            NONE
+  PLL Data In bus Data5:                            NONE
+  PLL Data In bus Data6:                            NONE
+  PLL Data In bus Data7:                            NONE
+  PLL Data bus Acknowledge:                         NONE
+  PLL Data Out bus Data0:                           NONE
+  PLL Data Out bus Data1:                           NONE
+  PLL Data Out bus Data2:                           NONE
+  PLL Data Out bus Data3:                           NONE
+  PLL Data Out bus Data4:                           NONE
+  PLL Data Out bus Data5:                           NONE
+  PLL Data Out bus Data6:                           NONE
+  PLL Data Out bus Data7:                           NONE
+  Input Clock Frequency (MHz):                      133.0000
+  Output Clock(P) Frequency (MHz):                  66.5000
+  Output Clock(S) Frequency (MHz):                  NA
+  Output Clock(S2) Frequency (MHz):                 NA
+  Output Clock(S3) Frequency (MHz):                 NA
+  CLKOP Post Divider A Input:                       DIVA
+
+                                   Page 23
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+PLL/DLL Summary (cont)
+----------------------
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              VCO_PHASE
+  Pre Divider B Input:                              VCO_PHASE
+  Pre Divider C Input:                              VCO_PHASE
+  Pre Divider D Input:                              VCO_PHASE
+  VCO Bypass A Input:                               VCO_PHASE
+  VCO Bypass B Input:                               VCO_PHASE
+  VCO Bypass C Input:                               VCO_PHASE
+  VCO Bypass D Input:                               VCO_PHASE
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     2
+  CLKFB Divider:                                    1
+  CLKOP Divider:                                    8
+  CLKOS Divider:                                    1
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+  Fractional N Divider:                             0
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 RISING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 FALLING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS3 Desired Phase Shift(degree):               0
+
+OSC Summary
+-----------
+
+OSC 1:                                     Pin/Node Value
+  OSC Instance Name:                                OSCH_u0
+  OSC Type:                                         OSCH
+  STDBY Input:                                      NONE
+  OSC Output:                              NODE     Osc_Clk
+  OSC Nominal Frequency (MHz):                      133.00
+
+Embedded Functional Block Connection Summary
+--------------------------------------------
+
+   Desired WISHBONE clock frequency: 66.5 MHz
+   Clock source:                     x2osc_clk
+   Reset source:                     sys_rst_n_c
+   Functions mode:
+      I2C #1 (Primary) Function:     ENABLED
+      I2C #2 (Secondary) Function:   DISABLED
+      SPI Function:                  DISABLED
+      Timer/Counter Function:        DISABLED
+      Timer/Counter Mode:            WB
+      UFM Connection:                ENABLED
+      PLL0 Connection:               DISABLED
+      PLL1 Connection:               DISABLED
+   I2C Function Summary:
+   --------------------
+      I2C Component:          PRIMARY
+
+                                   Page 24
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+Embedded Functional Block Connection Summary (cont)
+---------------------------------------------------
+      I2C Addressing:         7BIT
+      I2C Performance:        100kHz
+      Slave Address:          0b1000001
+      General Call:           DISABLED
+      I2C Wake Up:            DISABLED
+      I2C Component:          UFM/Configuration
+      I2C Addressing:         7BIT
+      I2C Performance:        100kHz
+      Slave Address:          0b1000000
+   SPI Function Summary:
+   --------------------
+      None
+   Timer/Counter Function Summary:
+   ------------------------------
+      None
+   UFM Function Summary:
+   --------------------
+      UFM Utilization:        General Purpose Flash Memory
+      Initialized UFM Pages:  1 Pages (1*128 Bits)
+      Available General
+      Purpose Flash Memory:   2046 Pages (2046*128 Bits)
+
+           EBR Blocks with Unique
+      Initialization Data:    0
+
+           WID		EBR Instance
+      ---		------------
+      0b0000000001	u_drv/fb_fb_0_1
+      0b0000000001	u_drv/fb_fb_0_0
+      0b0000000001	u_spi/POSRX_NEGTX.mem_rx_pat_1_POSRX_NEGTX.mem_rx_pat_1_0_0
+      0b0000000011	u_spi/mem_tx_eep_mem_tx_eep_0_0
+      0b0000000001	u_spi/mem_tx_pat_mem_tx_pat_0_0
+      0b0000000100	u_spi/mem_tx_sys_mem_tx_sys_0_0
+      0b0000000001	u_spi/POSRX_NEGTX.mem_rx_pat_POSRX_NEGTX.mem_rx_pat_0_0
+
+
+ASIC Components
+---------------
+
+Instance Name: OSCH_u0
+         Type: OSCH
+Instance Name: efb_i2c_prgrm_u0/EFBInst_0
+         Type: EFB
+Instance Name: u_eep/u_rx_fifo/u_fifo/fifo_0_0
+         Type: FIFO8KB
+Instance Name: u_eep/u_tx_fifo/u_fifo/fifo_0_0
+         Type: FIFO8KB
+Instance Name: u_drv/fb_fb_0_1
+         Type: PDPW8KC
+Instance Name: u_drv/fb_fb_0_0
+         Type: PDPW8KC
+Instance Name: u_spi/POSRX_NEGTX.mem_rx_pat_1_POSRX_NEGTX.mem_rx_pat_1_0_0
+         Type: PDPW8KC
+Instance Name: u_spi/mem_tx_eep_mem_tx_eep_0_0
+         Type: PDPW8KC
+Instance Name: u_spi/mem_tx_pat_mem_tx_pat_0_0
+
+                                   Page 25
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+ASIC Components (cont)
+----------------------
+         Type: PDPW8KC
+Instance Name: u_spi/mem_tx_sys_mem_tx_sys_0_0
+         Type: PDPW8KC
+Instance Name: u_spi/POSRX_NEGTX.mem_rx_pat_POSRX_NEGTX.mem_rx_pat_0_0
+         Type: PDPW8KC
+Instance Name: pll_u1/PLLInst_0
+         Type: EHXPLLJ
+Instance Name: pll_u0/PLLInst_0
+         Type: EHXPLLJ
+
+GSR Usage
+---------
+
+GSR Component:
+   The local reset signal 'sys_rst_n_c' of the design has been inferred as
+        Global Set Reset (GSR). The reset signal used for GSR control is
+        'sys_rst_n_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components on inferred reset domain with GSR Property disabled
+--------------------------------------------------------------
+
+     These components have the GSR property set to DISABLED and are on the
+     inferred reset domain. The components will respond to the reset signal
+     'sys_rst_n_c' via the local reset on the component and not the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 9 
+   EFB = 1, FIFO8KB = 4 
+
+     Type and instance name of component: 
+   Register : erase_auto_pend
+   Register : erase_ctrl_q1[2]
+   Register : erase_ctrl_q1[1]
+   Register : erase_ctrl_q1[0]
+   Register : erase_ctrl_q2[2]
+   Register : erase_ctrl_q2[1]
+   Register : erase_ctrl_q2[0]
+   Register : slave_erase_clr
+   Register : auto_erase_kick_in_progress
+   EFB : efb_i2c_prgrm_u0/EFBInst_0
+   FIFO8KB : u_eep/u_rx_fifo/u_fifo/fifo_0_0
+   FIFO8KB : u_eep/u_rx_fifo/u_fifo/fifo_0_0
+   FIFO8KB : u_eep/u_tx_fifo/u_fifo/fifo_0_0
+   FIFO8KB : u_eep/u_tx_fifo/u_fifo/fifo_0_0
+
+
+
+
+
+                                   Page 26
+
+
+
+
+Design:  system_top                                    Date:  10/31/25  15:25:14
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 1 secs  
+   Total REAL Time: 2 secs  
+   Peak Memory Usage: 97 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   Page 27
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights
+     reserved.

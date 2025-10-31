@@ -2,7 +2,7 @@
 # do {C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/Project/sim/sim.mdo}
 # Loading project sim
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
-# Start time: 17:45:18 on Oct 30,2025
+# Start time: 14:39:47 on Oct 31,2025
 # vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/spi_eeprom_model_simple.v 
 # -- Compiling module eeprom_m95p32_emu
 # ** Warning: C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/spi_eeprom_model_simple.v(169): (vlog-2182) 'id_array' might be read before written in always_comb or always @* block.
@@ -10,145 +10,154 @@
 # 
 # Top level modules:
 # 	eeprom_m95p32_emu
-# End time: 17:45:18 on Oct 30,2025, Elapsed time: 0:00:00
+# End time: 14:39:47 on Oct 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 2
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
-# Start time: 17:45:18 on Oct 30,2025
+# Start time: 14:39:47 on Oct 31,2025
 # vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/spi_bit_engine.v 
 # -- Compiling module spi_bit_engine_sim
 # 
 # Top level modules:
 # 	spi_bit_engine_sim
-# End time: 17:45:18 on Oct 30,2025, Elapsed time: 0:00:00
+# End time: 14:39:47 on Oct 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
-# Start time: 17:45:18 on Oct 30,2025
+# Start time: 14:39:47 on Oct 31,2025
 # vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/spi_master_top.v 
 # -- Compiling module spi_master_top
 # 
 # Top level modules:
 # 	spi_master_top
-# End time: 17:45:19 on Oct 30,2025, Elapsed time: 0:00:01
+# End time: 14:39:48 on Oct 31,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
-# Start time: 17:45:19 on Oct 30,2025
+# Start time: 14:39:48 on Oct 31,2025
+# vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/LatticeIP/EFB" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/LatticeIP/EFB/efb_i2c_prgrm.v 
+# -- Compiling module efb_i2c_prgrm
+# 
+# Top level modules:
+# 	efb_i2c_prgrm
+# End time: 14:39:48 on Oct 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 14:39:48 on Oct 31,2025
 # vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/spi_bit_engine_v2.v 
 # -- Compiling module spi_bit_engine_v2
 # 
 # Top level modules:
 # 	spi_bit_engine_v2
-# End time: 17:45:19 on Oct 30,2025, Elapsed time: 0:00:00
+# End time: 14:39:48 on Oct 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
-# Start time: 17:45:19 on Oct 30,2025
+# Start time: 14:39:48 on Oct 31,2025
 # vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/spi_eeprom_iface.v 
 # -- Compiling module spi_eeprom_iface
 # 
 # Top level modules:
 # 	spi_eeprom_iface
-# End time: 17:45:19 on Oct 30,2025, Elapsed time: 0:00:00
+# End time: 14:39:48 on Oct 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
-# Start time: 17:45:19 on Oct 30,2025
+# Start time: 14:39:48 on Oct 31,2025
 # vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/LatticeIP/fifo" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/LatticeIP/fifo/fifo.v 
 # -- Compiling module fifo
 # 
 # Top level modules:
 # 	fifo
-# End time: 17:45:19 on Oct 30,2025, Elapsed time: 0:00:00
+# End time: 14:39:48 on Oct 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
-# Start time: 17:45:19 on Oct 30,2025
+# Start time: 14:39:48 on Oct 31,2025
 # vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/async_fifo_dc.v 
 # -- Compiling module async_fifo_dc
 # 
 # Top level modules:
 # 	async_fifo_dc
-# End time: 17:45:19 on Oct 30,2025, Elapsed time: 0:00:00
+# End time: 14:39:48 on Oct 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
-# Start time: 17:45:19 on Oct 30,2025
+# Start time: 14:39:48 on Oct 31,2025
 # vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/spi_eeprom_iface_bridge.v 
 # -- Compiling module spi_eeprom_iface_bridge
 # 
 # Top level modules:
 # 	spi_eeprom_iface_bridge
-# End time: 17:45:20 on Oct 30,2025, Elapsed time: 0:00:01
+# End time: 14:39:48 on Oct 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
-# Start time: 17:45:20 on Oct 30,2025
+# Start time: 14:39:48 on Oct 31,2025
 # vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/led32x32_matrix_driver.v 
 # -- Compiling module led32x32_matrix_driver
 # 
 # Top level modules:
 # 	led32x32_matrix_driver
-# End time: 17:45:20 on Oct 30,2025, Elapsed time: 0:00:00
+# End time: 14:39:49 on Oct 31,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
-# Start time: 17:45:20 on Oct 30,2025
+# Start time: 14:39:49 on Oct 31,2025
 # vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/led32x32_buf_writer.v 
 # -- Compiling module led32x32_row_streamer
 # 
 # Top level modules:
 # 	led32x32_row_streamer
-# End time: 17:45:20 on Oct 30,2025, Elapsed time: 0:00:00
+# End time: 14:39:49 on Oct 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
-# Start time: 17:45:20 on Oct 30,2025
+# Start time: 14:39:49 on Oct 31,2025
 # vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/spi_slave_top.v 
 # -- Compiling module spi_slave_engine
 # 
 # Top level modules:
 # 	spi_slave_engine
-# End time: 17:45:20 on Oct 30,2025, Elapsed time: 0:00:00
+# End time: 14:39:49 on Oct 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
-# Start time: 17:45:20 on Oct 30,2025
+# Start time: 14:39:49 on Oct 31,2025
 # vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/dp_bram_256x32.v 
 # -- Compiling module dp_bram_256x32
 # 
 # Top level modules:
 # 	dp_bram_256x32
-# End time: 17:45:20 on Oct 30,2025, Elapsed time: 0:00:00
+# End time: 14:39:49 on Oct 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
-# Start time: 17:45:20 on Oct 30,2025
+# Start time: 14:39:49 on Oct 31,2025
 # vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/LatticeIP/pll2" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/LatticeIP/pll2/pll2.v 
 # -- Compiling module pll2
 # 
 # Top level modules:
 # 	pll2
-# End time: 17:45:20 on Oct 30,2025, Elapsed time: 0:00:00
+# End time: 14:39:49 on Oct 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
-# Start time: 17:45:20 on Oct 30,2025
+# Start time: 14:39:49 on Oct 31,2025
 # vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/LatticeIP/pll" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/LatticeIP/pll/pll.v 
 # -- Compiling module pll
 # 
 # Top level modules:
 # 	pll
-# End time: 17:45:20 on Oct 30,2025, Elapsed time: 0:00:00
+# End time: 14:39:49 on Oct 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
-# Start time: 17:45:20 on Oct 30,2025
+# Start time: 14:39:49 on Oct 31,2025
 # vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/system_top.v 
 # -- Compiling module system_top
 # 
 # Top level modules:
 # 	system_top
-# End time: 17:45:21 on Oct 30,2025, Elapsed time: 0:00:01
+# End time: 14:39:49 on Oct 31,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
-# Start time: 17:45:21 on Oct 30,2025
+# Start time: 14:39:49 on Oct 31,2025
 # vlog -reportprogress 300 "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/RTL/define" "+incdir+C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM" -work work C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v 
 # -- Compiling module tb_system_top_v2
 # 
 # Top level modules:
 # 	tb_system_top_v2
-# End time: 17:45:21 on Oct 30,2025, Elapsed time: 0:00:00
+# End time: 14:39:50 on Oct 31,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -L work -L pmi_work -L ovi_machxo3l tb_system_top_v2 
-# Start time: 17:45:21 on Oct 30,2025
+# Start time: 14:39:50 on Oct 31,2025
 # //  ModelSim - Lattice FPGA Edition 2023.3 Jul 18 2023
 # //
 # //  Copyright 1991-2023 Mentor Graphics Corporation
@@ -182,109 +191,172 @@
 # Loading ovi_machxo3l.FIFO8KB
 # Loading work.spi_eeprom_iface
 # Loading work.spi_bit_engine_v2
+# Loading work.efb_i2c_prgrm
+# Loading ovi_machxo3l.BB
+# Loading ovi_machxo3l.EFB
+# Loading ovi_machxo3l.efb_top
+# Loading ovi_machxo3l.sbnx8v1s
+# Loading ovi_machxo3l.tc_16bit
+# Loading ovi_machxo3l.sbnx2v1s
+# Loading ovi_machxo3l.syncprqx2v1s
+# Loading ovi_machxo3l.DW01_incdec
+# Loading ovi_machxo3l.efb_pll_sci
+# Loading ovi_machxo3l.efb_sci
+# Loading ovi_machxo3l.sci_mux
+# Loading ovi_machxo3l.noglitch_clkmux
+# Loading ovi_machxo3l.pipeline
+# Loading ovi_machxo3l.pipestage
+# Loading ovi_machxo3l.CKHS_OA22X2
+# Loading ovi_machxo3l.hsc_oa22x2v1e
+# Loading ovi_machxo3l.BUFX4
+# Loading ovi_machxo3l.sci_register_bit
+# Loading ovi_machxo3l.sci_interrupt_bit
+# Loading ovi_machxo3l.sci_pulse_bit
+# Loading ovi_machxo3l.sci_interrupt_neg
+# Loading ovi_machxo3l.wr_pulse
+# Loading ovi_machxo3l.config_plus
+# Loading ovi_machxo3l.stdby_cntl
+# Loading ovi_machxo3l.MUX2X2
+# Loading ovi_machxo3l.mux21x2v1s
+# Loading ovi_machxo3l.delc1x2v1s
+# Loading ovi_machxo3l.delc12
+# Loading ovi_machxo3l.delc3x2v1s
+# Loading ovi_machxo3l.redge_detect
+# Loading ovi_machxo3l.ANDabNX2
+# Loading ovi_machxo3l.nor2ix2v1s
+# Loading ovi_machxo3l.config_cntl
+# Loading ovi_machxo3l.config_io
+# Loading ovi_machxo3l.jtag_filter
+# Loading ovi_machxo3l.sbnx1v1s
+# Loading ovi_machxo3l.AO222S
+# Loading ovi_machxo3l.aoi222x2v1s
+# Loading ovi_machxo3l.invx4v1s
+# Loading ovi_machxo3l.config_core
+# Loading ovi_machxo3l.cfg_cdu
+# Loading ovi_machxo3l.cfg_clk
+# Loading ovi_machxo3l.cfg_div_smclk
+# Loading ovi_machxo3l.CKHS_MUX2X2
+# Loading ovi_machxo3l.hsc_mux21x2v1e
+# Loading ovi_machxo3l.CKHS_BUFX4
+# Loading ovi_machxo3l.hsc_sbnx4v1e
+# Loading ovi_machxo3l.cfg_div
+# Loading ovi_machxo3l.CKHS_MUX4X2
+# Loading ovi_machxo3l.hsc_mux41x2v1e
+# Loading ovi_machxo3l.cfg_pdec
+# Loading ovi_machxo3l.njport_unit
+# Loading ovi_machxo3l.cfg_port
+# Loading ovi_machxo3l.flag_dbl
+# Loading ovi_machxo3l.wbc_port
+# Loading ovi_machxo3l.cfg_i2c
+# Loading ovi_machxo3l.i2c_port
+# Loading ovi_machxo3l.spi_port
+# Loading ovi_machxo3l.cfg_pdrv
+# Loading ovi_machxo3l.cfg_data
+# Loading ovi_machxo3l.cfg_fifo
+# Loading ovi_machxo3l.cfg_cntl
+# Loading ovi_machxo3l.cfg_refresh
+# Loading ovi_machxo3l.cfg_prog_wakeup
+# Loading ovi_machxo3l.cfg_logic
+# Loading ovi_machxo3l.cfg_register
+# Loading ovi_machxo3l.cfg_qual
+# Loading ovi_machxo3l.cfg_bse
+# Loading ovi_machxo3l.cfg_driver
+# Loading ovi_machxo3l.jtag_cntl
+# Loading ovi_machxo3l.jtag_tap_cntl
+# Loading ovi_machxo3l.jtag_inst_dec
+# Loading ovi_machxo3l.jtag_logic
+# Loading ovi_machxo3l.jtag_register
+# Loading ovi_machxo3l.jtag_modal_1532
+# Loading ovi_machxo3l.jtag_qual
+# Loading ovi_machxo3l.njtag_cntl
+# Loading ovi_machxo3l.njtag_fsm
+# Loading ovi_machxo3l.njtag_modal
+# Loading ovi_machxo3l.njtag_register
+# Loading ovi_machxo3l.njtag_cmd_dec
+# Loading ovi_machxo3l.njtag_logic
+# Loading ovi_machxo3l.njtag_qual
+# Loading ovi_machxo3l.datap_unit
+# Loading ovi_machxo3l.sram_block
+# Loading ovi_machxo3l.sram_register
+# Loading ovi_machxo3l.sram_qual
+# Loading ovi_machxo3l.sram_exec
+# Loading ovi_machxo3l.sram_sed
+# Loading ovi_machxo3l.config_core_clocks
+# Loading ovi_machxo3l.CKHS_BUFX2
+# Loading ovi_machxo3l.hsc_sbnx2v1e
+# Loading ovi_machxo3l.CKHS_AND2X2
+# Loading ovi_machxo3l.hsc_and2x2v1e
+# Loading ovi_machxo3l.CKHS_XOR2X2
+# Loading ovi_machxo3l.hsc_xor2x2v1e
+# Loading ovi_machxo3l.CKHS_BUFX16
+# Loading ovi_machxo3l.hsc_sbnx16v1e
+# Loading ovi_machxo3l.CKHS_INVX1
+# Loading ovi_machxo3l.hsc_invx1v1e
+# Loading ovi_machxo3l.CKHS_DLAT_NLEV_CDN_PD_X2
+# Loading ovi_machxo3l.hsc_dlatnsrqnx2v1e
+# Loading ovi_machxo3l.CKHS_INVX2
+# Loading ovi_machxo3l.hsc_invx2v1e
+# Loading ovi_machxo3l.CKHS_NAND2IX2
+# Loading ovi_machxo3l.hsc_nand2ix2v1e
+# Loading ovi_machxo3l.vlov1s
+# Loading ovi_machxo3l.spare_gate_efb_0
+# Loading ovi_machxo3l.vhiv1s
+# Loading ovi_machxo3l.invx8v1s
+# Loading ovi_machxo3l.nand2x2v1s
+# Loading ovi_machxo3l.dffpsrqnx2v1s
+# Loading ovi_machxo3l.sbnx4v1s
+# Loading ovi_machxo3l.spare_gate_efb_1
+# Loading ovi_machxo3l.spare_gate_efb_2
+# Loading ovi_machxo3l.spare_gate_efb_3
+# Loading ovi_machxo3l.flash_top
+# Loading ovi_machxo3l.xo2_flash
 # Loading work.spi_master_top
 # Loading work.spi_bit_engine_sim
 # Loading work.eeprom_m95p32_emu
+# Loading ovi_machxo3l.sig_sync
+# Loading ovi_machxo3l.cfg_act_senser
+# Loading ovi_machxo3l.cfgrst_gen
+# Loading ovi_machxo3l.decompress_unit
+# Loading ovi_machxo3l.cfg_dec
+# Loading ovi_machxo3l.cfg_crc16
+# Loading ovi_machxo3l.flash_block
+# Loading ovi_machxo3l.flash_register
+# Loading ovi_machxo3l.flash_qual
+# Loading ovi_machxo3l.flash_exec
+# Loading ovi_machxo3l.fe_gen
+# Loading ovi_machxo3l.re_gen
+# Loading ovi_machxo3l.flash_ctrl
+# Loading ovi_machxo3l.flash_dnld
+# Loading ovi_machxo3l.flash_pptc
+# Loading ovi_machxo3l.flash_cdm
+# Loading ovi_machxo3l.flash_sdm
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'u_dut'.  Expected 20, found 18.
+#    Time: 0 fs  Iteration: 0  Instance: /tb_system_top_v2/u_dut File: C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v Line: 98
+# ** Warning: (vsim-3722) C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v(98): [TFMPC] - Missing connection for port 'prgrm_scl'.
+# ** Warning: (vsim-3722) C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v(98): [TFMPC] - Missing connection for port 'prgrm_sda'.
+# Loading ovi_machxo3l.POSCDAC_UDP
+# Loading ovi_machxo3l.POSFFAC_UDP
+# Loading ovi_machxo3l.TGM2_UDP
+# Loading ovi_machxo3l.TGM4_UDP
+# Loading ovi_machxo3l.LN4_UDP
+# Loading ovi_machxo3l.DNEQ_UDP
+# Loading ovi_machxo3l.NNP_UDP
+# Loading ovi_machxo3l.PDCHK_UDP
+# Loading ovi_machxo3l.CDCHK_UDP
+# Loading ovi_machxo3l.NP_UDP
 # GetModuleFileName: �䤣����w���ҲաC
 # 
 # 
 # .main_pane.wave.interior.cs.body.pw.wf
 # Warning! Wrong oscillator frequency; default to 2.08 MHz.
+# Configuration complete. EFB now in user mode.                 820
 run -all
 # [408600000] 🚨 GPIO_LED[0] toggled (Frame Done)
-# 
-# ========================================
-#   System Top Complete Test (V2)
-# ========================================
-# 
-# 
-# --- Test 1: Basic Sanity Check ---
-# [11946900000]  READ FPGA_VER_H: MISMATCH - Got 0x94, Expected 0x16
-# [18773700000]  READ FPGA_VER_L: MISMATCH - Got 0x22, Expected 0x8d
-# 
-# --- Test 2: First Pattern Write ---
-# [18773700000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
-# [23965900000]    SET Mode=0x00: SPI WRITE Done
-# [23965900000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
-# [29158100000]  SET ADDR_L=0x00: SPI WRITE Done
-# [29158100000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
-# [34350300000]  SET ADDR_H=0x00: SPI WRITE Done
-# [34350300000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
-# [39542500000]  SET EEP_OP=0x01: SPI WRITE Done
-# [39542500000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
-# [240115600000]    WRITE_PATTERN: SPI WRITE Done
-# [296749100000] LED Frame Done detected
-# 
-# --- Test 3: Second Pattern Write (EEPROM_RW) ---
-# [302902800000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
-# [308095000000] T Mode=EEPROM_RW: SPI WRITE Done
-# [308095000000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
-# [313287300000]  SET ADDR_L=0x00: SPI WRITE Done
-# [313287300000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
-# [318479500000]  SET ADDR_H=0x00: SPI WRITE Done
-# [318479500000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
-# [519052500000]    WRITE_PATTERN: SPI WRITE Done
-# 
-# --- Test 4: EEPROM Read Trigger ---
-# [818469900000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
-# [823662100000] T Mode=EEPROM_RW: SPI WRITE Done
-# [823662100000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
-# [828854300000]  SET ADDR_L=0x00: SPI WRITE Done
-# [828854300000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
-# [834046500000]  SET ADDR_H=0x00: SPI WRITE Done
-# [834046500000]  SET EEP_OP=READ: SPI WRITE bank=2 addr=0x02 len=1
-# [839238700000]  SET EEP_OP=READ: SPI WRITE Done
-# [855680700000]  READ EEP Status: MISMATCH - Got 0x0b, Expected 0x00
-# [891353100000]  READ EEP Status: MISMATCH - Got 0x0f, Expected 0x00
-# [927025500000]  READ EEP Status: MISMATCH - Got 0x0f, Expected 0x00
-# [943467500000]  READ EEP Status: MISMATCH - Got 0x0f, Expected 0x00
-# 
-# --- Test 4: MCU ReadBack EEPROM Data ---
-# [1039619500000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
-# [1044811700000] T Mode=EEPROM_RW: SPI WRITE Done
-# [1044811700000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
-# [1050003900000]       SET ADDR_L: SPI WRITE Done
-# [1050003900000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
-# [1055196100000]       SET ADDR_H: SPI WRITE Done
-# [1055196100000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
-# [1060388300000] gger EEPROM Read: SPI WRITE Done
-#   ✅ Read Complete!
-# [1315864200000] eadBack from PAT: READ 128 bytes from 0x00
-# ✅ Test 4 PASSED - All 128 bytes match!
-# 
-# --- Test 5: MODE_FAST_SWITCH ---
-# [1315864200000] Mode=FAST_SWITCH: SPI WRITE bank=0 addr=0x05 len=1
-# [1321056400000] Mode=FAST_SWITCH: SPI WRITE Done
-# [1321056400000] stSwitch ID=0x00: SPI WRITE bank=0 addr=0xf0 len=1
-# [1326248600000] stSwitch ID=0x00: SPI WRITE Done
-# 
-# --- Test 4: MCU ReadBack EEPROM Data ---
-# [1470476600000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
-# [1475668800000] T Mode=EEPROM_RW: SPI WRITE Done
-# [1475668800000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
-# [1480861000000]       SET ADDR_L: SPI WRITE Done
-# [1480861000000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
-# [1486053200000]       SET ADDR_H: SPI WRITE Done
-# [1486053200000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
-# [1491245400000] gger EEPROM Read: SPI WRITE Done
-# [1693356900000] eadBack from PAT: READ 128 bytes from 0x00
-# ✅ Test 4 PASSED - All 128 bytes match!
-# 
-# ========================================
-#   TEST SUMMARY (V2 Migration)
-# ========================================
-# Total Errors: 6
-# ========================================
-# ❌ TESTS FAILED - 6 error(s)
-# ========================================
-# 
-# ** Note: $finish    : C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v(700)
-#    Time: 17126873100 ps  Iteration: 0  Instance: /tb_system_top_v2
-# 1
-# Break in Module tb_system_top_v2 at C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v line 700
+run -all
 # Compile of spi_eeprom_model_simple.v was successful with warnings.
 # Compile of spi_bit_engine.v was successful.
 # Compile of spi_master_top.v was successful.
+# Compile of efb_i2c_prgrm.v was successful.
 # Compile of spi_bit_engine_v2.v was successful.
 # Compile of spi_eeprom_iface.v was successful.
 # Compile of fifo.v was successful.
@@ -298,7 +370,7 @@ run -all
 # Compile of pll.v was successful.
 # Compile of system_top.v was successful.
 # Compile of tb_spi_slave.v was successful.
-# 16 compiles, 0 failed with no errors.
+# 17 compiles, 0 failed with no errors.
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading work.tb_system_top_v2
@@ -317,276 +389,10 @@ restart
 # Loading work.spi_master_top
 # Loading work.spi_bit_engine_sim
 # Loading work.eeprom_m95p32_emu
-run -all
-# Warning! Wrong oscillator frequency; default to 2.08 MHz.
-# [408600000] 🚨 GPIO_LED[0] toggled (Frame Done)
-# 
-# ========================================
-#   System Top Complete Test (V2)
-# ========================================
-# 
-# 
-# --- Test 1: Basic Sanity Check ---
-# [11946900000]  READ FPGA_VER_H: PASS (0x94)
-# [18773700000]  READ FPGA_VER_L: PASS (0x22)
-# 
-# --- Test 2: First Pattern Write ---
-# [18773700000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
-# [23965900000]    SET Mode=0x00: SPI WRITE Done
-# [23965900000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
-# [29158100000]  SET ADDR_L=0x00: SPI WRITE Done
-# [29158100000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
-# [34350300000]  SET ADDR_H=0x00: SPI WRITE Done
-# [34350300000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
-# [39542500000]  SET EEP_OP=0x01: SPI WRITE Done
-# [39542500000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
-# [240115600000]    WRITE_PATTERN: SPI WRITE Done
-# [296749100000] LED Frame Done detected
-# 
-# --- Test 3: Second Pattern Write (EEPROM_RW) ---
-# [302902800000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
-# [308095000000] T Mode=EEPROM_RW: SPI WRITE Done
-# [308095000000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
-# [313287300000]  SET ADDR_L=0x00: SPI WRITE Done
-# [313287300000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
-# [318479500000]  SET ADDR_H=0x00: SPI WRITE Done
-# [318479500000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
-# [519052500000]    WRITE_PATTERN: SPI WRITE Done
-# 
-# --- Test 4: EEPROM Read Trigger ---
-# [818469900000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
-# [823662100000] T Mode=EEPROM_RW: SPI WRITE Done
-# [823662100000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
-# [828854300000]  SET ADDR_L=0x00: SPI WRITE Done
-# [828854300000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
-# [834046500000]  SET ADDR_H=0x00: SPI WRITE Done
-# [834046500000]  SET EEP_OP=READ: SPI WRITE bank=2 addr=0x02 len=1
-# [839238700000]  SET EEP_OP=READ: SPI WRITE Done
-# 
-# --- Test 4: MCU ReadBack EEPROM Data ---
-# [935390700000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
-# [940582900000] T Mode=EEPROM_RW: SPI WRITE Done
-# [940582900000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
-# [945775100000]       SET ADDR_L: SPI WRITE Done
-# [945775100000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
-# [950967300000]       SET ADDR_H: SPI WRITE Done
-# [950967300000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
-# [956159500000] gger EEPROM Read: SPI WRITE Done
-#   ✅ Read Complete!
-# [1211635400000] eadBack from PAT: READ 128 bytes from 0x00
-# ✅ Test 4 PASSED - All 128 bytes match!
-# 
-# --- Test 5: MODE_FAST_SWITCH ---
-# [1211635400000] Mode=FAST_SWITCH: SPI WRITE bank=0 addr=0x05 len=1
-# [1216827600000] Mode=FAST_SWITCH: SPI WRITE Done
-# [1216827600000] stSwitch ID=0x00: SPI WRITE bank=0 addr=0xf0 len=1
-# [1222019800000] stSwitch ID=0x00: SPI WRITE Done
-# 
-# --- Test 4: MCU ReadBack EEPROM Data ---
-# [1366247800000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
-# [1371440000000] T Mode=EEPROM_RW: SPI WRITE Done
-# [1371440000000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
-# [1376632200000]       SET ADDR_L: SPI WRITE Done
-# [1376632200000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
-# [1381824400000]       SET ADDR_H: SPI WRITE Done
-# [1381824400000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
-# [1387016600000] gger EEPROM Read: SPI WRITE Done
-# [1589128100000] eadBack from PAT: READ 128 bytes from 0x00
-# ✅ Test 4 PASSED - All 128 bytes match!
-# 
-# --- Test 1: Basic Sanity Check ---
-# [1615185300000]  READ FPGA_VER_H: PASS (0x94)
-# [1622012100000]  READ FPGA_VER_L: PASS (0x22)
-# 
-# --- Test 2: First Pattern Write ---
-# [1622012100000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
-# [1627204300000]    SET Mode=0x00: SPI WRITE Done
-# [1627204300000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
-# [1632396500000]  SET ADDR_L=0x00: SPI WRITE Done
-# [1632396500000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
-# [1637588800000]  SET ADDR_H=0x00: SPI WRITE Done
-# [1637588800000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
-# [1642781000000]  SET EEP_OP=0x01: SPI WRITE Done
-# [1642781000000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
-# [1843354000000]    WRITE_PATTERN: SPI WRITE Done
-# [1899987600000] LED Frame Done detected
-# 
-# --- Test 3: Second Pattern Write (EEPROM_RW) ---
-# [1906141300000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
-# [1911333500000] T Mode=EEPROM_RW: SPI WRITE Done
-# [1911333500000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
-# [1916525700000]  SET ADDR_L=0x00: SPI WRITE Done
-# [1916525700000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
-# [1921717900000]  SET ADDR_H=0x00: SPI WRITE Done
-# [1921717900000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
-# [2122291000000]    WRITE_PATTERN: SPI WRITE Done
-# 
-# --- Test 4: EEPROM Read Trigger ---
-# [2421708300000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
-# [2426900500000] T Mode=EEPROM_RW: SPI WRITE Done
-# [2426900500000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
-# [2432092700000]  SET ADDR_L=0x00: SPI WRITE Done
-# [2432092700000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
-# [2437284900000]  SET ADDR_H=0x00: SPI WRITE Done
-# [2437284900000]  SET EEP_OP=READ: SPI WRITE bank=2 addr=0x02 len=1
-# [2442477100000]  SET EEP_OP=READ: SPI WRITE Done
-# 
-# --- Test 4: MCU ReadBack EEPROM Data ---
-# [2538629100000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
-# [2543821400000] T Mode=EEPROM_RW: SPI WRITE Done
-# [2543821400000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
-# [2549013600000]       SET ADDR_L: SPI WRITE Done
-# [2549013600000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
-# [2554205800000]       SET ADDR_H: SPI WRITE Done
-# [2554205800000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
-# [2559398000000] gger EEPROM Read: SPI WRITE Done
-# [2761509500000] eadBack from PAT: READ 128 bytes from 0x00
-# ✅ Test 4 PASSED - All 128 bytes match!
-# 
-# --- Test 5: MODE_FAST_SWITCH ---
-# [2761509500000] Mode=FAST_SWITCH: SPI WRITE bank=0 addr=0x05 len=1
-# [2766701700000] Mode=FAST_SWITCH: SPI WRITE Done
-# [2766701700000] stSwitch ID=0x00: SPI WRITE bank=0 addr=0xf0 len=1
-# [2771893900000] stSwitch ID=0x00: SPI WRITE Done
-# 
-# --- Test 4: MCU ReadBack EEPROM Data ---
-# [2916121900000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
-# [2921314100000] T Mode=EEPROM_RW: SPI WRITE Done
-# [2921314100000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
-# [2926506300000]       SET ADDR_L: SPI WRITE Done
-# [2926506300000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
-# [2931698500000]       SET ADDR_H: SPI WRITE Done
-# [2931698500000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
-# [2936890700000] gger EEPROM Read: SPI WRITE Done
-# [3139002200000] eadBack from PAT: READ 128 bytes from 0x00
-# ✅ Test 4 PASSED - All 128 bytes match!
-# 
-# --- Test 1: Basic Sanity Check ---
-# [3165059400000]  READ FPGA_VER_H: PASS (0x94)
-# [3171886200000]  READ FPGA_VER_L: PASS (0x22)
-# 
-# --- Test 2: First Pattern Write ---
-# [3171886200000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
-# [3177078400000]    SET Mode=0x00: SPI WRITE Done
-# [3177078400000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
-# [3182270600000]  SET ADDR_L=0x00: SPI WRITE Done
-# [3182270600000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
-# [3187462800000]  SET ADDR_H=0x00: SPI WRITE Done
-# [3187462800000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
-# [3192655000000]  SET EEP_OP=0x01: SPI WRITE Done
-# [3192655000000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
-# [3393228100000]    WRITE_PATTERN: SPI WRITE Done
-# [3449861600000] LED Frame Done detected
-# 
-# --- Test 3: Second Pattern Write (EEPROM_RW) ---
-# [3456015400000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
-# [3461207600000] T Mode=EEPROM_RW: SPI WRITE Done
-# [3461207600000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
-# [3466399800000]  SET ADDR_L=0x00: SPI WRITE Done
-# [3466399800000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
-# [3471592000000]  SET ADDR_H=0x00: SPI WRITE Done
-# [3471592000000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
-# [3672165100000]    WRITE_PATTERN: SPI WRITE Done
-# 
-# --- Test 4: EEPROM Read Trigger ---
-# [3971582400000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
-# [3976774600000] T Mode=EEPROM_RW: SPI WRITE Done
-# [3976774600000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
-# [3981966800000]  SET ADDR_L=0x00: SPI WRITE Done
-# [3981966800000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
-# [3987159000000]  SET ADDR_H=0x00: SPI WRITE Done
-# [3987159000000]  SET EEP_OP=READ: SPI WRITE bank=2 addr=0x02 len=1
-# [3992351200000]  SET EEP_OP=READ: SPI WRITE Done
-# 
-# --- Test 4: MCU ReadBack EEPROM Data ---
-# [4088503200000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
-# [4093695400000] T Mode=EEPROM_RW: SPI WRITE Done
-# [4093695400000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
-# [4098887600000]       SET ADDR_L: SPI WRITE Done
-# [4098887600000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
-# [4104079900000]       SET ADDR_H: SPI WRITE Done
-# [4104079900000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
-# [4109272100000] gger EEPROM Read: SPI WRITE Done
-# [4311383600000] eadBack from PAT: READ 128 bytes from 0x00
-# ✅ Test 4 PASSED - All 128 bytes match!
-# 
-# --- Test 5: MODE_FAST_SWITCH ---
-# [4311383600000] Mode=FAST_SWITCH: SPI WRITE bank=0 addr=0x05 len=1
-# [4316575800000] Mode=FAST_SWITCH: SPI WRITE Done
-# [4316575800000] stSwitch ID=0x00: SPI WRITE bank=0 addr=0xf0 len=1
-# [4321768000000] stSwitch ID=0x00: SPI WRITE Done
-# 
-# --- Test 4: MCU ReadBack EEPROM Data ---
-# [4465996000000] T Mode=EEPROM_RW: SPI WRITE bank=0 addr=0x05 len=1
-# [4471188200000] T Mode=EEPROM_RW: SPI WRITE Done
-# [4471188200000]       SET ADDR_L: SPI WRITE bank=2 addr=0x00 len=1
-# [4476380400000]       SET ADDR_L: SPI WRITE Done
-# [4476380400000]       SET ADDR_H: SPI WRITE bank=2 addr=0x01 len=1
-# [4481572600000]       SET ADDR_H: SPI WRITE Done
-# [4481572600000] gger EEPROM Read: SPI WRITE bank=2 addr=0x02 len=1
-# [4486764800000] gger EEPROM Read: SPI WRITE Done
-# [4688876300000] eadBack from PAT: READ 128 bytes from 0x00
-# ✅ Test 4 PASSED - All 128 bytes match!
-# 
-# --- Test 1: Basic Sanity Check ---
-# [4714933500000]  READ FPGA_VER_H: PASS (0x94)
-# [4721760300000]  READ FPGA_VER_L: PASS (0x22)
-# 
-# --- Test 2: First Pattern Write ---
-# [4721760300000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
-# [4726952500000]    SET Mode=0x00: SPI WRITE Done
-# [4726952500000]  SET ADDR_L=0x00: SPI WRITE bank=2 addr=0x00 len=1
-# [4732144700000]  SET ADDR_L=0x00: SPI WRITE Done
-# [4732144700000]  SET ADDR_H=0x00: SPI WRITE bank=2 addr=0x01 len=1
-# [4737336900000]  SET ADDR_H=0x00: SPI WRITE Done
-# [4737336900000]  SET EEP_OP=0x01: SPI WRITE bank=2 addr=0x02 len=1
-# [4742529100000]  SET EEP_OP=0x01: SPI WRITE Done
-# [4742529100000]    WRITE_PATTERN: SPI WRITE bank=1 addr=0x00 len=128
-# [4943102200000]    WRITE_PATTERN: SPI WRITE Done
-# [4999735700000] LED Frame Done detected
-# 
-# [ERROR] Simulation Timeout!
-# Last known state:
-#   err_count = 0
-# ** Note: $finish    : C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v(696)
-#    Time: 50 ms  Iteration: 0  Instance: /tb_system_top_v2
-# 1
-# Break in Module tb_system_top_v2 at C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v line 696
-# Compile of spi_eeprom_model_simple.v was successful with warnings.
-# Compile of spi_bit_engine.v was successful.
-# Compile of spi_master_top.v was successful.
-# Compile of spi_bit_engine_v2.v was successful.
-# Compile of spi_eeprom_iface.v was successful.
-# Compile of fifo.v was successful.
-# Compile of async_fifo_dc.v was successful.
-# Compile of spi_eeprom_iface_bridge.v was successful.
-# Compile of led32x32_matrix_driver.v was successful.
-# Compile of led32x32_buf_writer.v was successful.
-# Compile of spi_slave_top.v was successful.
-# Compile of dp_bram_256x32.v was successful.
-# Compile of pll2.v was successful.
-# Compile of pll.v was successful.
-# Compile of system_top.v was successful.
-# Compile of tb_spi_slave.v was successful.
-# 16 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_system_top_v2
-# Loading work.system_top
-# Loading work.pll
-# Loading work.pll2
-# Loading work.dp_bram_256x32
-# Loading work.spi_slave_engine
-# Loading work.led32x32_row_streamer
-# Loading work.led32x32_matrix_driver
-# Loading work.spi_eeprom_iface_bridge
-# Loading work.async_fifo_dc
-# Loading work.fifo
-# Loading work.spi_eeprom_iface
-# Loading work.spi_bit_engine_v2
-# Loading work.spi_master_top
-# Loading work.spi_bit_engine_sim
-# Loading work.eeprom_m95p32_emu
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'u_dut'.  Expected 20, found 18.
+#    Time: 0 fs  Iteration: 0  Instance: /tb_system_top_v2/u_dut File: C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v Line: 98
+# ** Warning: (vsim-3722) C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v(98): [TFMPC] - Missing connection for port 'prgrm_scl'.
+# ** Warning: (vsim-3722) C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v(98): [TFMPC] - Missing connection for port 'prgrm_sda'.
 run -all
 # Warning! Wrong oscillator frequency; default to 2.08 MHz.
 # [408600000] 🚨 GPIO_LED[0] toggled (Frame Done)
@@ -599,7 +405,7 @@ run -all
 # 
 # --- Test 1: Basic Sanity Check ---
 # [507610400000]  READ FPGA_VER_H: PASS (0x94)
-# [514437200000]  READ FPGA_VER_L: PASS (0x22)
+# [514437200000]  READ FPGA_VER_L: MISMATCH - Got 0x25, Expected 0x22
 # 
 # --- Test 2: First Pattern Write ---
 # [514437200000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
@@ -667,7 +473,7 @@ run -all
 # 
 # --- Test 1: Basic Sanity Check ---
 # [2110848900000]  READ FPGA_VER_H: PASS (0x94)
-# [2117675700000]  READ FPGA_VER_L: PASS (0x22)
+# [2117675700000]  READ FPGA_VER_L: MISMATCH - Got 0x25, Expected 0x22
 # 
 # --- Test 2: First Pattern Write ---
 # [2117675700000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
@@ -734,7 +540,7 @@ run -all
 # 
 # --- Test 1: Basic Sanity Check ---
 # [3660723000000]  READ FPGA_VER_H: PASS (0x94)
-# [3667549800000]  READ FPGA_VER_L: PASS (0x22)
+# [3667549800000]  READ FPGA_VER_L: MISMATCH - Got 0x25, Expected 0x22
 # 
 # --- Test 2: First Pattern Write ---
 # [3667549800000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
@@ -801,7 +607,7 @@ run -all
 # 
 # --- Test 1: Basic Sanity Check ---
 # [5210597100000]  READ FPGA_VER_H: PASS (0x94)
-# [5217423900000]  READ FPGA_VER_L: PASS (0x22)
+# [5217423900000]  READ FPGA_VER_L: MISMATCH - Got 0x25, Expected 0x22
 # 
 # --- Test 2: First Pattern Write ---
 # [5217423900000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
@@ -868,7 +674,7 @@ run -all
 # 
 # --- Test 1: Basic Sanity Check ---
 # [6760471200000]  READ FPGA_VER_H: PASS (0x94)
-# [6767298000000]  READ FPGA_VER_L: PASS (0x22)
+# [6767298000000]  READ FPGA_VER_L: MISMATCH - Got 0x25, Expected 0x22
 # 
 # --- Test 2: First Pattern Write ---
 # [6767298000000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
@@ -935,7 +741,7 @@ run -all
 # 
 # --- Test 1: Basic Sanity Check ---
 # [8310345200000]  READ FPGA_VER_H: PASS (0x94)
-# [8317172000000]  READ FPGA_VER_L: PASS (0x22)
+# [8317172000000]  READ FPGA_VER_L: MISMATCH - Got 0x25, Expected 0x22
 # 
 # --- Test 2: First Pattern Write ---
 # [8317172000000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
@@ -1002,7 +808,7 @@ run -all
 # 
 # --- Test 1: Basic Sanity Check ---
 # [9860219300000]  READ FPGA_VER_H: PASS (0x94)
-# [9867046100000]  READ FPGA_VER_L: PASS (0x22)
+# [9867046100000]  READ FPGA_VER_L: MISMATCH - Got 0x25, Expected 0x22
 # 
 # --- Test 2: First Pattern Write ---
 # [9867046100000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
@@ -1069,7 +875,7 @@ run -all
 # 
 # --- Test 1: Basic Sanity Check ---
 # [11410093400000]  READ FPGA_VER_H: PASS (0x94)
-# [11416920200000]  READ FPGA_VER_L: PASS (0x22)
+# [11416920200000]  READ FPGA_VER_L: MISMATCH - Got 0x25, Expected 0x22
 # 
 # --- Test 2: First Pattern Write ---
 # [11416920200000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
@@ -1136,7 +942,7 @@ run -all
 # 
 # --- Test 1: Basic Sanity Check ---
 # [12959967500000]  READ FPGA_VER_H: PASS (0x94)
-# [12966794300000]  READ FPGA_VER_L: PASS (0x22)
+# [12966794300000]  READ FPGA_VER_L: MISMATCH - Got 0x25, Expected 0x22
 # 
 # --- Test 2: First Pattern Write ---
 # [12966794300000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
@@ -1203,7 +1009,7 @@ run -all
 # 
 # --- Test 1: Basic Sanity Check ---
 # [14509841600000]  READ FPGA_VER_H: PASS (0x94)
-# [14516668400000]  READ FPGA_VER_L: PASS (0x22)
+# [14516668400000]  READ FPGA_VER_L: MISMATCH - Got 0x25, Expected 0x22
 # 
 # --- Test 2: First Pattern Write ---
 # [14516668400000]    SET Mode=0x00: SPI WRITE bank=0 addr=0x05 len=1
@@ -1271,14 +1077,14 @@ run -all
 # ========================================
 #   TEST SUMMARY (V2 Migration)
 # ========================================
-# Total Errors: 0
+# Total Errors: 10
 # ========================================
-# 🎉 ALL TESTS PASSED ✓
+# ❌ TESTS FAILED - 10 error(s)
 # ========================================
 # 
 # ** Note: $finish    : C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v(689)
 #    Time: 160529888940 ps  Iteration: 0  Instance: /tb_system_top_v2
 # 1
 # Break in Module tb_system_top_v2 at C:/Keith/FPGA/TMY/RIS/RIS_Project5_1_1_2_1/SIM/tb_spi_slave.v line 689
-# End time: 17:59:08 on Oct 30,2025, Elapsed time: 0:13:47
-# Errors: 0, Warnings: 1
+# End time: 14:43:52 on Oct 31,2025, Elapsed time: 0:04:02
+# Errors: 0, Warnings: 4

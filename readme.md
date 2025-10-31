@@ -231,8 +231,8 @@ CMD[2:0] = Bank Select
 
 | Address | Register Name | Size | Default | Access | Description |
 |---------|---------------|------|---------|--------|-------------|
-| **0x00** | **FPGA_VER_H** | 8 bits | 0x16 | R | **FPGA Version High Byte**<br>• [7:4] Version Major (1)<br>• [3:0] Version Minor (6)<br>Example: 0x16 = Version 1.6 |
-| **0x01** | **FPGA_VER_L** | 8 bits | 0x8D | R | **FPGA Version Low Byte**<br>• [7:4] Patch Version (8)<br>• [3:0] Build Number (D)<br>Example: 0x8D = Patch 8, Build 13 |
+| **0x00** | **FPGA_VER_H** | 8 bits | 0x99 | R | **FPGA Version High Byte**<br>• [7:4] Version Major (1)<br>• [3:0] Version Minor (6)<br>Example: 0x16 = Version 1.6 |
+| **0x01** | **FPGA_VER_L** | 8 bits | 0x25 | R | **FPGA Version Low Byte**<br>• [7:4] Patch Version (8)<br>• [3:0] Build Number (D)<br>Example: 0x8D = Patch 8, Build 13 |
 | **0x02** | **HW_VERSION** | 8 bits | Dynamic | R | **Hardware Version (Board Detection)**<br>• [7] Reserved (0)<br>• [6:4] HW_L2[2:0] (Antenna Version)<br>• [3:0] HW_L1[3:0] (FPGA Board Version)<br>*Read from GPIO pins HW_L2_i and HW_L1_i* |
 | **0x03** | **RIS_FREQUENCY_INFO** | 8 bits | Dynamic | R | **Module Frequency Information**<br>• [7:4] Reserved (0)<br>• [3:0] Frequency Code:<br>&nbsp;&nbsp;- 0x0 = 28G<br>&nbsp;&nbsp;- 0x1 = 4G7<br>&nbsp;&nbsp;- 0x2 = 3G5<br>&nbsp;&nbsp;- 0x3 = Special<br>*Read from GPIO pins HW_Frequency_i[3:0]* |
 | **0x04** | **LED_CONTROL** | 8 bits | 0x00 | R/W | **LED Status Control**<br>• [7:2] Reserved<br>• [1] LED1 Control (gpio_LED[1])<br>• [0] LED0 Control (gpio_LED[0])<br>**Mode Effects:**<br>• 0x00: Idle (LED0=ON, LED1=OFF)<br>• 0x01: Find me (Both blink @ 0.5s)<br>• 0x02: Update in progress (LED0 blinks)<br>• 0x03: System error (LED1=ON, LED0=OFF) |

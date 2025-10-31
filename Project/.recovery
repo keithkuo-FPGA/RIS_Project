@@ -53,7 +53,13 @@
         <Source name="../LatticeIP/pll2/pll2.ipx" type="IPX_Module" type_short="IPX">
             <Options/>
         </Source>
+        <Source name="../LatticeIP/EFB/efb_i2c_prgrm.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
         <Source name="debugspi.rvl" type="Reveal" type_short="Reveal" excluded="TRUE">
+            <Options/>
+        </Source>
+        <Source name="impl1/impl1.xcf" type="Programming Project File" type_short="Programming">
             <Options/>
         </Source>
         <Source name="project.lpf" type="Logic Preference" type_short="LPF">

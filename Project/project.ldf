@@ -2,7 +2,9 @@
 <BaliProject version="3.2" title="project" device="LCMXO3LF-6900C-5BG256C" default_implementation="impl1">
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
-        <Options def_top="system_top"/>
+        <Options def_top="system_top">
+            <Option name="include path" value="../RTL/define"/>
+        </Options>
         <Source name="../RTL/spi_slave_top.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
@@ -45,10 +47,16 @@
         <Source name="../RTL/async_fifo_dc.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="debugspi.rvl" type="Reveal" type_short="Reveal" excluded="TRUE">
+        <Source name="../LatticeIP/fifo/fifo.ipx" type="IPX_Module" type_short="IPX">
             <Options/>
         </Source>
-        <Source name="impl1/impl1.xcf" type="Programming Project File" type_short="Programming">
+        <Source name="../LatticeIP/pll2/pll2.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="../LatticeIP/EFB/efb_i2c_prgrm.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="debugspi.rvl" type="Reveal" type_short="Reveal" excluded="TRUE">
             <Options/>
         </Source>
         <Source name="project.lpf" type="Logic Preference" type_short="LPF">

@@ -1,0 +1,8 @@
+{
+  "[verilog]": {
+    "editor.defaultFormatter": "isaacT.verilog-formatter"
+  },
+  "[systemverilog]": {
+    "editor.defaultFormatter": "isaacT.verilog-formatter"
+  }
+}

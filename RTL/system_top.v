@@ -50,6 +50,10 @@ module system_top #
            inout    wire                    eep_dq2,
            inout    wire                    eep_dq3,
 
+           // I2C Program
+           inout    wire                    prgrm_scl,
+           inout    wire                    prgrm_sda,
+
            // Clock
 `ifdef SIM
            // debug
@@ -92,13 +96,13 @@ reg  [7:0]                  hw_freq_shadow;
 wire [7:0]                  hw_freq_byte;
 
 //----------------- SYS LED Ctrl -------------------------------
-reg  [24:0]                 tick_cnt;               // 共用 0.5s 計數器
-reg                         halfsec_tick;           // 共用 tick（1 個 clk 週期寬）
+reg  [24:0]                 tick_cnt;               // Shared 0.5s counter
+reg                         halfsec_tick;           // Shared tick (1 clk cycle width)
 
 wire                        led0_rx_done_s;         // from slave (sclk_i domain)
 wire                        led1_rx_done_s;         // from slave (sclk_i domain)
-reg                         led0_q;                 // LED0 輸出狀態
-reg                         led1_q;                 // LED1 輸出狀態
+reg                         led0_q;                 // LED0 Output status
+reg                         led1_q;                 // LED1 Output status
 wire [1:0]                  led_mode;
 
 // ---------------- SPI slave interface -----------------------
@@ -139,7 +143,7 @@ reg  [7:0]                 sys_pat_mode; // SYS:0x05
 reg  [7:0]                 eep_op_now;   // EEP:0x02
 reg  [7:0]                 eep_addr_h;   // EEP:0x00
 reg  [7:0]                 eep_addr_l;   // EEP:0x01
-reg                        load_from_eep;// 0:從 PAT(mem_rx_pat)；1:從 EEPROM 讀入
+reg                        load_from_eep;// 0: Read from PAT(mem_rx_pat); 1: Read from EEPROM
 
 reg                        eif_wready_q1, eif_wready_q2;
 reg                        eif_rvalid_q1, eif_rvalid_q2;
@@ -162,15 +166,15 @@ reg                        erase_done_d1, erase_done_d2;
 wire                       erase_done_rise;
 reg                        erase_auto_pend;
 reg                        erase_auto_pend_ack;
-reg                        slave_erase_clr;      // 回寫到 slave 的清旗標
-reg  [3:0]                 slave_erase_clr_cnt;  // 伸展清旗標
+reg                        slave_erase_clr;      // Write back to the slave's clearing flag
+reg  [3:0]                 slave_erase_clr_cnt;  // Extend the Qing flag
 reg                        auto_erase_kick_in_progress;
 reg                        auto_erase_kick_set_pulse;
 
-reg  [1:0]                 eep_byte_cnt;   // 0..3：每 4 個 byte 組一列
-reg                        eep_rd_need_display;  // 1=需要顯示(Fast Switch), 0=僅供MCU(R/W mode)
+reg  [1:0]                 eep_byte_cnt;         // 0..3: Each column consists of 4 bytes.
+reg                        eep_rd_need_display;  // 1 = Display required (Fast Switch), 0 = MCU only (R/W mode)
 
-reg  [3:0]                 eep_status_reg;       // Status 寄存器本體
+reg  [3:0]                 eep_status_reg;       // Status register
 reg                        eep_write_set;        // Write
 reg                        eep_read_set;         // Read
 reg                        eep_erase_set;        // Erase
@@ -188,11 +192,13 @@ reg                        stream_start_armed;
 
 reg                        restart_req;          // FSM -> pulser
 reg                        start_ack;            // pulser -> FSM
-reg                        led_enable;           // 在載入期間關閉，PDONE 開啟
+reg                        led_enable;           // Close during loading, PDONE on.
 reg                        disp_gate;
 wire                       drv_enable_gate;
 reg  [3:0]                 enable_delay_cnt;
 
+reg                        init_done;            // Initialization complete flag
+reg  [4:0]                 init_row_cnt;         // Initialize the row counter
 // ---------------- BRAM 256x32 ----------------
 reg                        bram_we_a;
 reg  [7:0]                 bram_addr_a;
@@ -202,52 +208,59 @@ wire                       bram_rd_en_b;
 wire [7:0]                 bram_rd_addr_b;
 wire [31:0]                bram_rd_data_b;
 
-// ---------------- SYS 協定暫存 ----------------
+// ---------------- SYS protocol ----------------
 reg  [7:0]                 sys_frame_sel;
 reg  [7:0]                 sys_pat_seq,  pat_seq_seen;
 reg  [7:0]                 sys_eep_seq,  eep_seq_seen;
 reg  [23:0]                sys_eep_addr;
 reg  [7:0]                 sys_eep_len;
 
-// ---------------- 主控 FSM ----------------
-// 主狀態
-localparam ST_IDLE          = 5'd0;   // 閒置等待
+// ---------------- I2C Prgrm ----------------
+wire [7:0]                 wb_dat_o;
+wire                       wb_ack_o;
+wire                       i2c1_irqo;
+wire                       wbc_ufm_irq;
 
-// Pattern Control Mode 判斷流程
-localparam ST_READ_MODE     = 5'd1;   // 讀取 SYS:0x05 (Pattern Control Mode)
+// ---------------- Main FSM ----------------
+// Main State
+localparam ST_IDLE          = 5'd0; // Idle Waiting
 
-// Fast Pattern Switch 流程
-localparam ST_FAST_ID_L     = 5'd2;   // 讀取 SYS:0xF0 (Fast Switch ID Low)
-localparam ST_FAST_ID_H     = 5'd3;   // 讀取 SYS:0xF1 (Fast Switch ID High)
+// Pattern Control Mode Judgment Flow
+localparam ST_READ_MODE     = 5'd1; // Read SYS:0x05 (Pattern Control Mode)
 
-// EEPROM R/W 流程
-localparam ST_EEP_OP        = 5'd4;   // 讀取 EEP:0x02 (Operation Mode)
-localparam ST_EEP_ID_L      = 5'd5;   // 讀取 EEP:0x00 (Pattern ID Low)
-localparam ST_EEP_ID_H      = 5'd6;   // 讀取 EEP:0x01 (Pattern ID High)
+// Fast Pattern Switch Flow
+localparam ST_FAST_ID_L     = 5'd2; // Read SYS:0xF0 (Fast Switch ID Low)
+localparam ST_FAST_ID_H     = 5'd3; // Read SYS:0xF1 (Fast Switch ID High)
 
-// Erase 流程
-localparam ST_ERASE_CTRL    = 5'd7;   // 讀取 EEP:0x03 (Erase Control)
-localparam ST_ERASE_ID_L    = 5'd8;   // 讀取 Erase Pattern ID Low
-localparam ST_ERASE_ID_H    = 5'd9;   // 讀取 Erase Pattern ID High
+// EEPROM R/W Flow
+localparam ST_EEP_OP        = 5'd4; // Read EEP:0x02 (Operation Mode)
+localparam ST_EEP_ID_L      = 5'd5; // Read EEP:0x00 (Pattern ID Low)
+localparam ST_EEP_ID_H      = 5'd6; // Read EEP:0x01 (Pattern ID High)
 
-// Pattern 載入流程（PAT 或 EEPROM → BRAM）
-localparam ST_PAT_BYTE0     = 5'd10;  // 載入 Pattern Byte 0
-localparam ST_PAT_BYTE1     = 5'd11;  // 載入 Pattern Byte 1
-localparam ST_PAT_BYTE2     = 5'd12;  // 載入 Pattern Byte 2
-localparam ST_PAT_BYTE3     = 5'd13;  // 載入 Pattern Byte 3 並寫入 BRAM
-localparam ST_PAT_DONE      = 5'd14;  // Pattern 載入完成，啟動顯示
+// Erase Process
+localparam ST_ERASE_CTRL    = 5'd7; // Read EEP:0x03 (Erase Control)
+localparam ST_ERASE_ID_L    = 5'd8; // Read Erase Pattern ID Low
+localparam ST_ERASE_ID_H    = 5'd9; // Read Erase Pattern ID High
 
-// EEPROM 寫入流程（PAT → EEPROM）
-localparam ST_EEP_WR_START  = 4'd15;  // EEPROM 寫入啟動
+// Pattern Loading Process (PAT or EEPROM → BRAM)
+localparam ST_PAT_BYTE0     = 5'd10; // Load Pattern Byte 0
+localparam ST_PAT_BYTE1     = 5'd11; // Load Pattern Byte 1
+localparam ST_PAT_BYTE2     = 5'd12; // Load Pattern Byte 2
+localparam ST_PAT_BYTE3     = 5'd13; // Load Pattern Byte 3 and write it to BRAM
+
+localparam ST_PAT_DONE      = 5'd14; // Pattern loading complete, start display
+
+// EEPROM write process (PAT → EEPROM)
+localparam ST_EEP_WR_START  = 4'd15; // EEPROM write start
 
 // EEPROM Read
-localparam ST_EEP_RD_DATA   = 5'd16;  //
+localparam ST_EEP_RD_DATA   = 5'd16; //
 // ============================================================================
-// Pattern Control 相關定義
+// Pattern Control Definition
 // ============================================================================
-localparam MODE_DIRECT      = 8'h00;  // 直接從 PAT buffer 顯示
-localparam MODE_EEPROM_RW   = 8'h01;  // EEPROM 讀寫模式
-localparam MODE_FAST_SWITCH = 8'h02;  // Fast Pattern Switch 模式
+localparam MODE_DIRECT      = 8'h00;  // Display directly from PAT buffer
+localparam MODE_EEPROM_RW   = 8'h01;  // EEPROM R/W model
+localparam MODE_FAST_SWITCH = 8'h02;  // Fast Pattern Switch model
 
 localparam EEP_OP_NONE      = 8'h00;
 localparam EEP_OP_WRITE     = 8'h01;  // PAT → EEPROM
@@ -267,16 +280,16 @@ reg  [31:0]                pat_assemble;
 wire                       pat_rx_128_done_s;   // from slave (sclk_i domain)
 reg                        pat_done_d1;         // sync 1
 reg                        pat_done_d2;         // sync 2
-wire                       pat_done_rise;       // 上升沿（同步到 x2osc_clk）
+wire                       pat_done_rise;       // Rising edge (synchronize to x2osc_clk)
 reg                        pat_auto_pend;
 reg                        pat_auto_pend_ack;
 reg                        pat_auto_consume_pulse;
 
-reg                        slave_pat_clr;      // 回寫到 slave 的清旗標
-reg  [3:0]                 slave_pat_clr_cnt;  // 伸展清旗標
+reg                        slave_pat_clr;      // Write back to the slave's clearing flag
+reg  [3:0]                 slave_pat_clr_cnt;  // Extend the Qing flag
 reg                        auto_kick_in_progress;
 reg                        auto_kick_set_pulse;
-// wire                       auto_kick_set;      // 在 ST_DECIDE 看到上升沿時觸發
+// wire                       auto_kick_set;      // Triggered when a rising edge is seen in ST_DECIDE
 reg                        scan_kick_pulse;
 reg                        scan_pending;
 reg                        force_pat_clr_pulse;
@@ -349,7 +362,7 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
     else begin
         if (tick_cnt == HALF_SEC_MAX) begin
             tick_cnt     <= 25'd0;
-            halfsec_tick <= 1'b1;   // 僅此拍為 1
+            halfsec_tick <= 1'b1;
         end
         else begin
             tick_cnt     <= tick_cnt + 25'd1;
@@ -373,21 +386,21 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
     else begin
         case (led_mode)
             2'b00: begin
-                // 關
+                // close
                 led0_q <= 1'b1;
                 led1_q <= 1'b0;
             end
 
             2'b01: begin
-                // LED0 閃爍（0.5s），啟動當拍定相為 1
+                // LED0 flashes (0.5s), indicating the start-up phase is 1.
                 led1_q <= 1'b0;
                 if (halfsec_tick) begin
-                    led0_q <= ~led0_q;      // 之後每 0.5s 翻轉
+                    led0_q <= ~led0_q;      // Then flip every 0.5 seconds.
                 end
             end
 
             2'b10: begin
-                // LED1 閃爍（0.5s），啟動當拍定相為 1
+                // LED1 flashes (0.5s), triggering the start-up phase lock at 1.
                 led0_q <= 1'b0;
                 if (halfsec_tick) begin
                     led1_q <= ~led1_q;
@@ -395,7 +408,7 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
             end
 
             default: begin
-                // 2'b11：LED1 恆亮（Error），LED0 關
+                // LED1 is always on (Error), LED0 is off.
                 led0_q <= 1'b0;
                 led1_q <= 1'b1;
             end
@@ -414,13 +427,13 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
         eif_busy_q2   <= 1'b0;
     end
     else begin
-        eif_wready_q1 <= eif_wready;  // 跨域輸入
+        eif_wready_q1 <= eif_wready;  // Cross-domain input
         eif_wready_q2 <= eif_wready_q1;
 
-        eif_rvalid_q1 <= eif_rvalid;  // 跨域輸入
+        eif_rvalid_q1 <= eif_rvalid;  // Cross-domain input
         eif_rvalid_q2 <= eif_rvalid_q1;
 
-        eif_busy_q1   <= eif_busy;    // 若 ST_EK 用到了 busy，一併同步
+        eif_busy_q1   <= eif_busy;    // If ST_EK uses busy, synchronize it as well.
         eif_busy_q2   <= eif_busy_q1;
     end
 end
@@ -498,7 +511,7 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
         start_ack    <= 1'b0;
     end
     else begin
-        start_stream <= 1'b0;   // 預設 0，條件達成送 1 拍
+        start_stream <= 1'b0;
         start_ack    <= 1'b0;
         if (!busy_stream && restart_req) begin
             start_stream <= 1'b1;
@@ -577,6 +590,9 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
         eep_write_set        <= 1'b0;
         eep_read_set         <= 1'b0;
         eep_erase_set        <= 1'b0;
+
+        init_done            <= 1'b0;
+        init_row_cnt         <= 5'd0;
     end
     else begin
         cfg_rx_re            <= 1'b0;
@@ -599,7 +615,7 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
         if (start_ack)
             restart_req      <= 1'b0;
 
-        // HW Version 更新
+        // HW Version up-to-date
         if (hw_ver_byte != hw_ver_shadow && state == ST_IDLE) begin
             cfg_tx_bank   <= 2'd0;
             cfg_tx_addr   <= 8'h02;
@@ -617,6 +633,31 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
 
         case (state)
             ST_IDLE: begin
+                // if (!init_done) begin
+                //     // Phase 1: Write all zeros to BRAM
+                //     if (init_row_cnt < 5'd32) begin
+                //         bram_we_a    <= 1'b1;
+                //         bram_addr_a  <= {frame_sel_disp, init_row_cnt};
+                //         bram_wdata_a <= 32'd0;
+                //         init_row_cnt <= init_row_cnt + 5'd1;
+                //     end
+                //     // Phase 2: Trigger a display refresh
+                //     else if (init_row_cnt == 5'd32) begin
+                //         bram_we_a    <= 1'b0;
+                //         led_enable   <= 1'b1;
+                //         disp_gate    <= 1'b1;
+                //         restart_req  <= 1'b1;
+                //         init_row_cnt <= 5'd31;  // Mark for waiting
+                //     end
+                //     // Phase 3: Wait for frame_done
+                //     else if (frame_done) begin
+                //         led_enable   <= 1'b0;
+                //         disp_gate    <= 1'b0;
+                //         init_done    <= 1'b1;
+                //         init_row_cnt <= 5'd0;  // Clear to zero for later use
+                //     end
+                // end
+
                 if ((eep_write_set | eep_read_set | eep_erase_set) && !eif_busy_sync) begin
                     cfg_tx_bank  <= 2'd2;  // EEP bank
                     cfg_tx_addr  <= 8'h04;
@@ -681,7 +722,7 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
                         end
                     end
                     else if (cfg_rx_rdata == MODE_EEPROM_RW) begin
-                        // EEPROM R/W: 需要進一步判斷 Operation
+                        // EEPROM R/W: Further judgment required. Operation
                         led_enable          <= 1'b0;
                         force_pat_clr_pulse <= 1'b1;
 
@@ -692,7 +733,7 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
                         state          <= ST_EEP_OP;
                     end
                     else begin
-                        // Direct Mode: PAT → BRAM → 顯示
+                        // Direct Mode: PAT → BRAM → display
                         load_from_eep  <= 1'b0;
                         next_frame_sel <= frame_sel_disp;
                         pat_row        <= 5'd0;
@@ -708,7 +749,7 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
                 end
             end
 
-            // ====== Fast Switch 流程 ======
+            // ====== Fast Switch process ======
             ST_FAST_ID_L: begin
                 if (!cfg_pipe_valid) begin
                     eep_addr_l     <= cfg_rx_rdata;
@@ -725,27 +766,27 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
                 if (!cfg_pipe_valid) begin
                     eep_addr_h <= cfg_rx_rdata;
 
-                    // Fast Switch: 啟動 EEPROM 讀取並載入 BRAM
+                    // Fast Switch: Start EEPROM to read and load BRAM
                     eif_addr       <= {8'h00, cfg_rx_rdata, eep_addr_l, 7'd0};
                     eif_len        <= 10'd128;
                     eif_wr_rd_n    <= 1'b0;  // Read
                     eif_mem_sel    <= 1'b0;
                     eif_addr_vld   <= 1'b1;
 
-                    load_from_eep  <= 1'b1;  // 標記從 EEPROM 載入
+                    load_from_eep  <= 1'b1;  // Marks loaded from EEPROM
                     next_frame_sel <= frame_sel_disp;
                     pat_row        <= 5'd0;
                     pat_assemble   <= 32'd0;
                     eif_rready     <= 1'b1;
 
-                    eep_rd_need_display <= 1'b1;  // Fast Switch 一定要顯示
+                    eep_rd_need_display <= 1'b1;  // Fast Switch Must be displayed
 
-                    state             <= ST_PAT_BYTE0;  // 進入 BRAM 載入流程
+                    state             <= ST_PAT_BYTE0;  // Entering the BRAM loading process
                     pat_auto_pend_ack <= 1'b1;
                 end
             end
 
-            // ====== EEPROM R/W 流程 ======
+            // ====== EEPROM R/W process ======
             ST_EEP_OP: begin
                 if (!cfg_pipe_valid) begin
                     eep_op_now <= cfg_rx_rdata;
@@ -799,24 +840,24 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
                         state             <= ST_EEP_WR_START;
                     end
                     else begin
-                        // Read: EEPROM → mem_rx_eep（不顯示！）
+                        // Read: EEPROM → mem_rx_eep（Not displayed！）
                         eif_wr_rd_n    <= 1'b0;  // Read
                         eif_addr_vld   <= 1'b1;
                         eif_mem_sel    <= (eep_op_now == EEP_OP_ID_RD) ? 1'b1 : 1'b0;
 
-                        pat_src_index  <= 16'd0;  // 用於計數
+                        pat_src_index  <= 16'd0;  // Used for counting
                         eif_rready     <= 1'b1;
 
-                        // 判斷是否需要顯示
+                        // Determine whether to display
                         if (sys_pat_mode == MODE_EEPROM_RW) begin
-                            eep_rd_need_display <= 1'b0;  // 不顯示，僅寫 mem_tx_pat
+                            eep_rd_need_display <= 1'b0;  // Do not display, only write mem_tx_pat
                         end
                         else begin
-                            eep_rd_need_display <= 1'b1;  // 需要顯示（預設安全值）
+                            eep_rd_need_display <= 1'b1;  // The default security value needs to be displayed.
                         end
 
-                        pat_auto_pend_ack <= 1'b1;  // 立即清除 pending
-                        state             <= ST_EEP_RD_DATA;  // 進入專用狀態
+                        pat_auto_pend_ack <= 1'b1;  // Clear pending immediately
+                        state             <= ST_EEP_RD_DATA;  // Enter dedicated state
 
                         if(!eep_read_set) begin
                             eep_read_set  <= 1'b1;
@@ -830,23 +871,23 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
                 end
             end
 
-            // EEPROM Read → mem_tx_pat（供 MCU 讀取）
+            // EEPROM Read → mem_tx_pat (For MCU to read)
             ST_EEP_RD_DATA: begin
-                // 建議在該 always 頂端或這裡先清預設值（避免連續寫）
+                // First, clear the preset values ​​(to avoid continuous writes).
                 bram_we_a  <= 1'b0;
                 // eif_rready <= 1'b0;
 
                 if (eif_rvalid_sync) begin
                     eif_rready <= 1'b1;
 
-                    // 原有：鏡寫到 SPI Slave 的 mem_tx_pat[]（給 MCU，保留）
+
                     cfg_tx_bank  <= 2'd1;                   // EEP bank
                     cfg_tx_addr  <= pat_src_index[7:0];     // 0..127
                     cfg_tx_wdata <= eif_rdata;
                     cfg_tx_we    <= 1'b1;
                     pat_src_index <= pat_src_index + 16'd1;
 
-                    // 新增：4 個 byte 組成一個 32-bit，寫 BRAM_A 的一列
+                    // Four bytes form a 32-bit array, which is written as a column of BRAM_A.
                     if (eep_rd_need_display) begin
                         case (eep_byte_cnt)
                             2'd0:
@@ -858,7 +899,7 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
                             2'd3: begin
                                 pat_assemble[31:24] <= eif_rdata;
 
-                                // 寫入 BRAM
+                                // Write to BRAM
                                 bram_addr_a  <= {next_frame_sel, pat_row};
                                 bram_wdata_a <= {eif_rdata, pat_assemble[23:0]};
                                 bram_we_a    <= 1'b1;
@@ -871,7 +912,7 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
                         else
                             eep_byte_cnt <= eep_byte_cnt + 2'd1;
 
-                        // 128 Bytes 完成後進入顯示流程
+                        // After 128 bytes are completed, the display process begins.
                         if ((eep_byte_cnt == 2'd3) && (pat_row == 5'd31)) begin
                             eep_disp_ready <= 1'b1;
                             load_from_eep  <= 1'b0;
@@ -879,9 +920,9 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
                         end
                     end
                     else begin
-                        // 不需要顯示的情況：僅計數，不寫 BRAM
+                        // Cases where display is not required: Only counting, no writing to BRAM.
                         if (pat_src_index == 16'd128) begin
-                            // 128 Bytes 讀取完成，直接回 IDLE（不觸發顯示）
+                            // Reading 128 bytes complete, return directly to IDLE (without triggering display).
                             state <= ST_IDLE;
                         end
                     end
@@ -889,7 +930,7 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
             end
 
 
-            // ====== Erase 流程 ======
+            // ====== Erase process ======
             ST_ERASE_CTRL: begin
                 if (!cfg_pipe_valid) begin
                     eif_erase_ctrl      <= erase_ctrl_sync;
@@ -935,7 +976,7 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
                 end
             end
 
-            // ====== Pattern 載入流程（PAT 或 EEPROM → BRAM）======
+            // ====== Pattern loading process (PAT or EEPROM → BRAM) ======
             ST_PAT_BYTE0: begin
                 if (!load_from_eep) begin
                     if (!cfg_pipe_valid) begin
@@ -1047,7 +1088,7 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
             end
 
             ST_PAT_DONE: begin
-                // ✅ 載入完成，啟動顯示
+                // Loading complete, startup display
                 frame_sel_disp      <= next_frame_sel;
                 led_enable          <= 1'b1;
                 disp_gate           <= 1'b1;
@@ -1059,7 +1100,7 @@ always @(posedge x2osc_clk or negedge sys_rst_n) begin
                 state <= ST_IDLE;
             end
 
-            // ====== EEPROM Write 流程 ======
+            // ====== EEPROM Write process ======
             ST_EEP_WR_START: begin
                 if (!cfg_pipe_valid && !eif_wvalid && (eif_busy_sync || eif_wready_sync)) begin
                     eif_wdata  <= cfg_rx_rdata;
@@ -1217,43 +1258,26 @@ spi_eeprom_iface_bridge u_eep (
                             .busy           (eif_busy)
                         );
 
-
-
+`ifndef SIM
+        efb_i2c_prgrm efb_i2c_prgrm_u0 (
+            .wb_clk_i       (x2osc_clk  ),
+            .wb_rst_i       (~sys_rst_n ),
+            .wb_cyc_i       (1'b0       ),
+            .wb_stb_i       (1'b0       ),
+            .wb_we_i        (1'b0       ),
+            .wb_adr_i       (8'd0       ),
+            .wb_dat_i       (8'd0       ),
+            .wb_dat_o       (),
+            .wb_ack_o       (),
+            .i2c1_scl       (prgrm_scl  ),
+            .i2c1_sda       (prgrm_sda  ),
+            .i2c1_irqo      (i2c_irqo   ),
+            .wbc_ufm_irq    (wbc_ufm_irq)
+        );
+`endif
 
 generate
     if(SPI_DEBUG_EN==1) begin: SPI_ILA_DEBUG
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
